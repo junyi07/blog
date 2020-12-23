@@ -10,21 +10,21 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/1024.png">
   <link rel="mask-icon" href="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/1024.png" color="#222">
 
-<link rel="stylesheet" href="/blog/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"junyi07.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"junyi07.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="This post applies to Linux Red Hat (and probably some other Linux versions too).">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to create an application launcher (Linux)">
-<meta property="og:url" content="https://junyi07.github.io/2017/06/15/2017-06-15-create-application-launcher/index.html">
+<meta property="og:url" content="https://junyi07.github.io/blog/2017/06/15/2017-06-15-create-application-launcher/index.html">
 <meta property="og:site_name" content="Junyi&#39;s blog">
 <meta property="og:description" content="This post applies to Linux Red Hat (and probably some other Linux versions too).">
 <meta property="og:locale" content="en_US">
@@ -35,7 +35,7 @@
 <meta property="article:tag" content="Unix">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://junyi07.github.io/2017/06/15/2017-06-15-create-application-launcher/">
+<link rel="canonical" href="https://junyi07.github.io/blog/2017/06/15/2017-06-15-create-application-launcher/">
 
 
 <script id="page-configurations">
@@ -97,7 +97,7 @@
 
   <div class="site-meta">
 
-    <a href="/blog/" class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">Junyi's blog</h1>
       <span class="logo-line-after"><i></i></span>
@@ -118,27 +118,27 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -193,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://junyi07.github.io/2017/06/15/2017-06-15-create-application-launcher/">
+    <link itemprop="mainEntityOfPage" href="https://junyi07.github.io/blog/2017/06/15/2017-06-15-create-application-launcher/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/profile.jpg">
@@ -231,7 +231,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Linux-Tips/" itemprop="url" rel="index"><span itemprop="name">Linux Tips</span></a>
+                  <a href="/categories/Linux-Tips/" itemprop="url" rel="index"><span itemprop="name">Linux Tips</span></a>
                 </span>
             </span>
 
@@ -297,7 +297,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="https://junyi07.github.io/2017/06/15/2017-06-15-create-application-launcher/" title="How to create an application launcher (Linux)">https://junyi07.github.io/2017/06/15/2017-06-15-create-application-launcher/</a>
+    <a href="https://junyi07.github.io/blog/2017/06/15/2017-06-15-create-application-launcher/" title="How to create an application launcher (Linux)">https://junyi07.github.io/blog/2017/06/15/2017-06-15-create-application-launcher/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -308,8 +308,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
-              <a href="/blog/tags/Unix/" rel="tag"><i class="fa fa-tag"></i> Unix</a>
+              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+              <a href="/tags/Unix/" rel="tag"><i class="fa fa-tag"></i> Unix</a>
           </div>
 
         
@@ -319,7 +319,7 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/blog/2020/12/21/2017-05-17-interviewing-a-polyglot/" rel="next" title="那个会说十几门外语的美国小哥来了">
+    <a href="/2020/12/21/2017-05-17-interviewing-a-polyglot/" rel="next" title="那个会说十几门外语的美国小哥来了">
       那个会说十几门外语的美国小哥来了 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -394,20 +394,20 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/blog/archives/">
+          <a href="/archives/">
         
           <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/blog/categories/">
+            <a href="/categories/">
           
         <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/blog/tags/">
+            <a href="/tags/">
           
         <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
@@ -419,7 +419,7 @@
         <a href="https://github.com/junyi07" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;junyi07" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="/blog/junyihe07@gmail.com" title="E-Mail → junyihe07@gmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="/junyihe07@gmail.com" title="E-Mail → junyihe07@gmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
 
@@ -502,30 +502,26 @@
 
   
   
-  <script color='120,120,120' opacity='0.5' zIndex='-1' count='150' src="/blog/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/blog/lib/anime.min.js"></script>
+  <script color='120,120,120' opacity='0.5' zIndex='-1' count='150' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/blog/js/utils.js"></script>
+<script src="/js/utils.js"></script>
 
-<script src="/blog/js/motion.js"></script>
-
-
-<script src="/blog/js/schemes/pisces.js"></script>
+<script src="/js/motion.js"></script>
 
 
-<script src="/blog/js/next-boot.js"></script>
-
-<script src="/blog/js/bookmark.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-  <script defer src="/blog/lib/three/three.min.js"></script>
-    <script defer src="/blog/lib/three/three-waves.min.js"></script>
-    <script defer src="/blog/lib/three/canvas_lines.min.js"></script>
-    <script defer src="/blog/lib/three/canvas_sphere.min.js"></script>
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
 
 
   
@@ -534,7 +530,7 @@
 
 
   
-<script src="/blog/js/local-search.js"></script>
+<script src="/js/local-search.js"></script>
 
 
 
@@ -563,7 +559,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'blog',
       owner       : 'junyi07',
       admin       : ['junyi07'],
-      id          : '6e6b29526a84442340b834f0ec2c94e1',
+      id          : 'dd944fd6de5d61660056a1f984b7c037',
         language: 'en',
       distractionFreeMode: true
     });
@@ -575,7 +571,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
   
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
   <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
-  <script async src="/js/cursor/explosion.min.js"></script>
+  <script async src="source/js/cursor/explosion.min.js"></script>
 
 
 

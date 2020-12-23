@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>高级英语阅读方法：理解中英文语法形态的大不同</title>
-    <url>/blog/2020/12/21/2017-04-19-english-reading-compresion-techniques/</url>
+    <url>/2020/12/21/2017-04-19-english-reading-compresion-techniques/</url>
     <content><![CDATA[<p>2013年我考过唯一一次雅思，没太多刻意准备，阅读听力都拿了9分（满分为9分）。虽然完全不是什么值得特意说的事，因为雅思在一众留学英语考试中算是简单的了，不过那之后几年来我持续积累了大量阅读英文文献和原版著作的经验与心得，到今天暗觉或许大概可能已经具备了一点点可以分享出来的资格了，便有了此文。</p>
 <a id="more"></a>
 <p>这篇文章不会讲雅思，不会讲留学，更不会讲考试技巧，只会从「元知识」的视角来谈一点「<strong>如何通过理解英语语言特征来快速提高英语阅读的理解速度」</strong>的浅见。</p>
@@ -90,7 +90,7 @@
   </entry>
   <entry>
     <title>那个会说十几门外语的美国小哥来了</title>
-    <url>/blog/2020/12/21/2017-05-17-interviewing-a-polyglot/</url>
+    <url>/2020/12/21/2017-05-17-interviewing-a-polyglot/</url>
     <content><![CDATA[<p>你是否曾幻想过，会讲十几门外语、读得懂十几种语言的小说是种什么体验？</p>
 <a id="more"></a>
 <p>今天我就请来了这样一位拥有外语技能满点的美国年轻人Kevin，我们进行了一次关于外语学习的深度交谈。</p>
@@ -175,35 +175,8 @@
       </tags>
   </entry>
   <entry>
-    <title>How to create an application launcher (Linux)</title>
-    <url>/blog/2017/06/15/2017-06-15-create-application-launcher/</url>
-    <content><![CDATA[<p>This post applies to Linux Red Hat (and probably some other Linux versions too).</p>
-<a id="more"></a>
-<p>If you want to create an application launcher for, for example, Eclipse so you can launch it much faster, you can follow this step-by-step tutorial. </p>
-<p>.</p>
-<p>Open a txt editor, and copy the following information to your file, edit the path so it applies to your case:</p>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding&#x3D;UTF-8</span><br><span class="line">Name&#x3D;Eclipse IDE</span><br><span class="line">Exec&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse</span><br><span class="line">Icon&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse.png</span><br><span class="line">Type&#x3D;Application</span><br><span class="line">Categories&#x3D;Development;IDE;</span><br></pre></td></tr></table></figure>
-<p>You can download the icon from the offical site if you don’t have it ready.</p>
-</blockquote>
-<p>.</p>
-<p>Save this file to <code>/home/YOUR_USER/.local/share/applications/eclipse.desktop</code>. Note the extension of the file name is <code>.desktop</code>.</p>
-<blockquote>
-<p>If you don’t see the hidden folders (folder name starts with ‘.’), type <code>Ctrl+H</code> to display them.</p>
-</blockquote>
-<p>This file should change to the icon of the desktop file.</p>
-]]></content>
-      <categories>
-        <category>Linux Tips</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Unix</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>六年后重考高考英语给我的收获</title>
-    <url>/blog/2020/12/21/2017-06-17-retaking-gaokao-english-after-6-years/</url>
+    <url>/2020/12/21/2017-06-17-retaking-gaokao-english-after-6-years/</url>
     <content><![CDATA[<p>2017年高考刚刚过去，为了测试下距我几年前上次高考时英语水平提高了多少，我今天兴致盎然地把今年的全国卷英语高考题做了一次！</p>
 <a id="more"></a>
 <p>因为没找到听力录音，也没人给我作文评分，所以我只把中间部分答完了，自认还蛮认真的。</p>
@@ -254,7 +227,7 @@
   </entry>
   <entry>
     <title>万能思维框架 WHAT, HOW, WHY | 由浅入深掌握新技能</title>
-    <url>/blog/2020/12/21/2017-08-14-thinking-framework-of-what-how-why/</url>
+    <url>/2020/12/21/2017-08-14-thinking-framework-of-what-how-why/</url>
     <content><![CDATA[<blockquote>
 <p>If you want to get smart, the question you have to keep asking is “why, why, why?”</p>
 <p>— Charlie Munger</p>
@@ -321,7 +294,7 @@
   </entry>
   <entry>
     <title>My First Post</title>
-    <url>/blog/2020/12/22/My-First-Post/</url>
+    <url>/2020/12/22/My-First-Post/</url>
     <content><![CDATA[<div class="note class_name">
             <h2 id="test1"><a href="#test1" class="headerlink" title="test1"></a>test1</h2><p>Content (1 md partial supported) </p>
           </div>
@@ -345,7 +318,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/blog/2020/12/22/hello-world/</url>
+    <url>/2020/12/22/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <a id="more"></a>
 
@@ -363,6 +336,33 @@
       </categories>
       <tags>
         <tag>tests</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to create an application launcher (Linux)</title>
+    <url>/2017/06/15/2017-06-15-create-application-launcher/</url>
+    <content><![CDATA[<p>This post applies to Linux Red Hat (and probably some other Linux versions too).</p>
+<a id="more"></a>
+<p>If you want to create an application launcher for, for example, Eclipse so you can launch it much faster, you can follow this step-by-step tutorial. </p>
+<p>.</p>
+<p>Open a txt editor, and copy the following information to your file, edit the path so it applies to your case:</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding&#x3D;UTF-8</span><br><span class="line">Name&#x3D;Eclipse IDE</span><br><span class="line">Exec&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse</span><br><span class="line">Icon&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse.png</span><br><span class="line">Type&#x3D;Application</span><br><span class="line">Categories&#x3D;Development;IDE;</span><br></pre></td></tr></table></figure>
+<p>You can download the icon from the offical site if you don’t have it ready.</p>
+</blockquote>
+<p>.</p>
+<p>Save this file to <code>/home/YOUR_USER/.local/share/applications/eclipse.desktop</code>. Note the extension of the file name is <code>.desktop</code>.</p>
+<blockquote>
+<p>If you don’t see the hidden folders (folder name starts with ‘.’), type <code>Ctrl+H</code> to display them.</p>
+</blockquote>
+<p>This file should change to the icon of the desktop file.</p>
+]]></content>
+      <categories>
+        <category>Linux Tips</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Unix</tag>
       </tags>
   </entry>
 </search>

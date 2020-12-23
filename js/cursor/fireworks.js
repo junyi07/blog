@@ -1,4 +1,4 @@
-                           class Circle {
+class Circle {
   constructor({ origin, speed, color, angle, context }) {
     this.origin = origin
     this.position = { ...this.origin }
