@@ -89,33 +89,6 @@
       </tags>
   </entry>
   <entry>
-    <title>How to create an application launcher (Linux)</title>
-    <url>/blog/2017/06/15/2017-06-15-create-application-launcher/</url>
-    <content><![CDATA[<p>This post applies to Linux Red Hat (and probably some other Linux versions too).</p>
-<a id="more"></a>
-<p>If you want to create an application launcher for, for example, Eclipse so you can launch it much faster, you can follow this step-by-step tutorial. </p>
-<p>.</p>
-<p>Open a txt editor, and copy the following information to your file, edit the path so it applies to your case:</p>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding&#x3D;UTF-8</span><br><span class="line">Name&#x3D;Eclipse IDE</span><br><span class="line">Exec&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse</span><br><span class="line">Icon&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse.png</span><br><span class="line">Type&#x3D;Application</span><br><span class="line">Categories&#x3D;Development;IDE;</span><br></pre></td></tr></table></figure>
-<p>You can download the icon from the offical site if you don’t have it ready.</p>
-</blockquote>
-<p>.</p>
-<p>Save this file to <code>/home/YOUR_USER/.local/share/applications/eclipse.desktop</code>. Note the extension of the file name is <code>.desktop</code>.</p>
-<blockquote>
-<p>If you don’t see the hidden folders (folder name starts with ‘.’), type <code>Ctrl+H</code> to display them.</p>
-</blockquote>
-<p>This file should change to the icon of the desktop file.</p>
-]]></content>
-      <categories>
-        <category>Linux Tips</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Unix</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>那个会说十几门外语的美国小哥来了</title>
     <url>/blog/2020/12/21/2017-05-17-interviewing-a-polyglot/</url>
     <content><![CDATA[<p>你是否曾幻想过，会讲十几门外语、读得懂十几种语言的小说是种什么体验？</p>
@@ -199,6 +172,33 @@
       </categories>
       <tags>
         <tag>learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>How to create an application launcher (Linux)</title>
+    <url>/blog/2017/06/15/2017-06-15-create-application-launcher/</url>
+    <content><![CDATA[<p>This post applies to Linux Red Hat (and probably some other Linux versions too).</p>
+<a id="more"></a>
+<p>If you want to create an application launcher for, for example, Eclipse so you can launch it much faster, you can follow this step-by-step tutorial. </p>
+<p>.</p>
+<p>Open a txt editor, and copy the following information to your file, edit the path so it applies to your case:</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding&#x3D;UTF-8</span><br><span class="line">Name&#x3D;Eclipse IDE</span><br><span class="line">Exec&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse</span><br><span class="line">Icon&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse.png</span><br><span class="line">Type&#x3D;Application</span><br><span class="line">Categories&#x3D;Development;IDE;</span><br></pre></td></tr></table></figure>
+<p>You can download the icon from the offical site if you don’t have it ready.</p>
+</blockquote>
+<p>.</p>
+<p>Save this file to <code>/home/YOUR_USER/.local/share/applications/eclipse.desktop</code>. Note the extension of the file name is <code>.desktop</code>.</p>
+<blockquote>
+<p>If you don’t see the hidden folders (folder name starts with ‘.’), type <code>Ctrl+H</code> to display them.</p>
+</blockquote>
+<p>This file should change to the icon of the desktop file.</p>
+]]></content>
+      <categories>
+        <category>Linux Tips</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Unix</tag>
       </tags>
   </entry>
   <entry>
@@ -330,9 +330,12 @@
             <p>Content (2 md partial supported) </p>
           </div>
 
+
 <a id="more"></a>
 
-<h2 id="code-block"><a href="#code-block" class="headerlink" title="code block"></a>code block</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccessTokenServiceTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> AccessTokenService accessTokenService;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String LUOWHO_SERVICE = <span class="string">&quot;LuowhoService&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SOCIAL_PEOPLE = <span class="string">&quot;SocialPeople&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@BeforeClass</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setUp</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        accessTokenService = AccessTokenService.getInstance();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test_instance_singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Act</span></span><br><span class="line">        AccessTokenService newAccessTokenService = AccessTokenService.getInstance();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Verify</span></span><br><span class="line">        Assertions.assertEquals(accessTokenService, newAccessTokenService);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test_getAccessToken_for_LuowhoService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Act</span></span><br><span class="line">        String accessToken = accessTokenService.getAccessToken(LUOWHO_SERVICE);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Verify</span></span><br><span class="line">        Assertions.assertNotNull(accessToken);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="code-block"><a href="#code-block" class="headerlink" title="code block"></a>code block</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccessTokenServiceTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> AccessTokenService accessTokenService;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String LUOWHO_SERVICE = <span class="string">&quot;LuowhoService&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String SOCIAL_PEOPLE = <span class="string">&quot;SocialPeople&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@BeforeClass</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setUp</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        accessTokenService = AccessTokenService.getInstance();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test_instance_singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Act</span></span><br><span class="line">        AccessTokenService newAccessTokenService = AccessTokenService.getInstance();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Verify</span></span><br><span class="line">        Assertions.assertEquals(accessTokenService, newAccessTokenService);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test_getAccessToken_for_LuowhoService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// Act</span></span><br><span class="line">        String accessToken = accessTokenService.getAccessToken(LUOWHO_SERVICE);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Verify</span></span><br><span class="line">        Assertions.assertNotNull(accessToken);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/profile.jpg"></p>
+]]></content>
       <categories>
         <category>Testing</category>
       </categories>
