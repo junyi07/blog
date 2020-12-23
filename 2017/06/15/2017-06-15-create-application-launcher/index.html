@@ -20,15 +20,21 @@
     var CONFIG = {"hostname":"junyi07.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://junyi07.github.io/archives/index.html">
+  <meta name="description" content="This post applies to Linux Red Hat (and probably some other Linux versions too).">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to create an application launcher (Linux)">
+<meta property="og:url" content="https://junyi07.github.io/2017/06/15/2017-06-15-create-application-launcher/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="This post applies to Linux Red Hat (and probably some other Linux versions too).">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-06-15T04:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-23T02:10:26.309Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Unix">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://junyi07.github.io/archives/">
+<link rel="canonical" href="https://junyi07.github.io/2017/06/15/2017-06-15-create-application-launcher/">
 
 
 <script id="page-configurations">
@@ -36,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Hexo</title>
+  <title>How to create an application launcher (Linux) | Hexo</title>
   
 
 
@@ -182,179 +188,131 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 7 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://junyi07.github.io/2017/06/15/2017-06-15-create-application-launcher/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          How to create an application launcher (Linux)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-06-15 00:00:00" itemprop="dateCreated datePublished" datetime="2017-06-15T00:00:00-04:00">2017-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-22 21:10:26" itemprop="dateModified" datetime="2020-12-22T21:10:26-05:00">2020-12-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Linux-Tips/" itemprop="url" rel="index"><span itemprop="name">Linux Tips</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/blog/2017/06/15/2017-06-15-create-application-launcher/" class="post-meta-item leancloud_visitors" data-flag-title="How to create an application launcher (Linux)" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-12-22T16:30:19-05:00"
-              content="2020-12-22">
-          12-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/blog/2020/12/22/My-First-Post/" itemprop="url">
-            <span itemprop="name">My First Post</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-12-22T12:10:43-05:00"
-              content="2020-12-22">
-          12-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/blog/2020/12/22/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-12-21T11:43:30-05:00"
-              content="2020-12-21">
-          12-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/blog/2020/12/21/2017-06-17-retaking-gaokao-english-after-6-years/" itemprop="url">
-            <span itemprop="name">六年后重考高考英语给我的收获</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-12-21T11:43:30-05:00"
-              content="2020-12-21">
-          12-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/blog/2020/12/21/2017-08-14-thinking-framework-of-what-how-why/" itemprop="url">
-            <span itemprop="name">万能思维框架 WHAT, HOW, WHY | 由浅入深掌握新技能</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-12-21T11:43:30-05:00"
-              content="2020-12-21">
-          12-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/blog/2020/12/21/2017-04-19-english-reading-compresion-techniques/" itemprop="url">
-            <span itemprop="name">高级英语阅读方法：理解中英文语法形态的大不同</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-12-21T11:43:30-05:00"
-              content="2020-12-21">
-          12-21
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/blog/2020/12/21/2017-05-17-interviewing-a-polyglot/" itemprop="url">
-            <span itemprop="name">那个会说十几门外语的美国小哥来了</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-    <div class="collection-year">
-      <span class="collection-header">2017</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2017-06-15T00:00:00-04:00"
-              content="2017-06-15">
-          06-15
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/blog/2017/06/15/2017-06-15-create-application-launcher/" itemprop="url">
-            <span itemprop="name">How to create an application launcher (Linux)</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <p>This post applies to Linux Red Hat (and probably some other Linux versions too).</p>
+<a id="more"></a>
+<p>If you want to create an application launcher for, for example, Eclipse so you can launch it much faster, you can follow this step-by-step tutorial. </p>
+<p>.</p>
+<p>Open a txt editor, and copy the following information to your file, edit the path so it applies to your case:</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding&#x3D;UTF-8</span><br><span class="line">Name&#x3D;Eclipse IDE</span><br><span class="line">Exec&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse</span><br><span class="line">Icon&#x3D;&#x2F;home&#x2F;USER&#x2F;programs&#x2F;eclipse&#x2F;eclipse.png</span><br><span class="line">Type&#x3D;Application</span><br><span class="line">Categories&#x3D;Development;IDE;</span><br></pre></td></tr></table></figure>
+<p>You can download the icon from the offical site if you don’t have it ready.</p>
+</blockquote>
+<p>.</p>
+<p>Save this file to <code>/home/YOUR_USER/.local/share/applications/eclipse.desktop</code>. Note the extension of the file name is <code>.desktop</code>.</p>
+<blockquote>
+<p>If you don’t see the hidden folders (folder name starts with ‘.’), type <code>Ctrl+H</code> to display them.</p>
+</blockquote>
+<p>This file should change to the icon of the desktop file.</p>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/blog/tags/Unix/" rel="tag"># Unix</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/blog/2020/12/21/2017-05-17-interviewing-a-polyglot/" rel="next" title="那个会说十几门外语的美国小哥来了">
+      那个会说十几门外语的美国小哥来了 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -628,6 +586,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'b3a81bf1a6a8b08a7721',
+      clientSecret: 'fe79e4da113593d07bc58c6d123fa9a13f05b126',
+      repo        : 'blog',
+      owner       : 'junyi07',
+      admin       : ['junyi07'],
+      id          : '6e6b29526a84442340b834f0ec2c94e1',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
   
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
