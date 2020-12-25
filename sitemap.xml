@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://junyi07.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-12-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/2020/12/22/My-First-Post/</loc>
+    
+    <lastmod>2020-12-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/lib/pace/README.html</loc>
+    
+    <lastmod>2020-12-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/lib/fancybox/README.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/lib/canvas-ribbon/README.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/lib/canvas-nest/README.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/lib/bookmark/package.json</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/lib/bookmark/renovate.json</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/lib/bookmark/README.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/about/index.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/2020/12/22/hello-world/</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-12-23</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>https://junyi07.github.io/</loc>
+    <lastmod>2020-12-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://junyi07.github.io/tags/posts/</loc>
+    <lastmod>2020-12-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/tags/tests/</loc>
+    <lastmod>2020-12-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://junyi07.github.io/categories/Testing/</loc>
+    <lastmod>2020-12-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>
