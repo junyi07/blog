@@ -24,28 +24,39 @@
     var CONFIG = {"hostname":"junyi07.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Junyi&#39;s blog">
-<meta property="og:url" content="https://junyi07.github.io/index.html">
+  <meta name="description" content="Amazon Elastic Compute Cloud (Amazon EC2) provides virtual machines (VM) where you can host the same kinds of applications that you might run on a traditional on-premises server. This blog is to recor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elastic Compute Cloud">
+<meta property="og:url" content="https://junyi07.github.io/2020/12/28/2020-12-28-Elastic-Compute-Cloud/index.html">
 <meta property="og:site_name" content="Junyi&#39;s blog">
+<meta property="og:description" content="Amazon Elastic Compute Cloud (Amazon EC2) provides virtual machines (VM) where you can host the same kinds of applications that you might run on a traditional on-premises server. This blog is to recor">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228181730.png">
+<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228182758.png">
+<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228182843.png">
+<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183332.png">
+<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183706.png">
+<meta property="article:published_time" content="2020-12-29T02:30:06.000Z">
+<meta property="article:modified_time" content="2020-12-29T02:41:42.957Z">
 <meta property="article:author" content="Junyi">
+<meta property="article:tag" content="AWS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228181730.png">
 
-<link rel="canonical" href="https://junyi07.github.io/">
+<link rel="canonical" href="https://junyi07.github.io/2020/12/28/2020-12-28-Elastic-Compute-Cloud/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Junyi's blog</title>
+  <title>Elastic Compute Cloud | Junyi's blog</title>
   
 
 
@@ -184,9 +195,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -202,10 +214,9 @@
       <meta itemprop="name" content="Junyi's blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2020/12/28/2020-12-28-Elastic-Compute-Cloud/" class="post-title-link" itemprop="url">Elastic Compute Cloud</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Elastic Compute Cloud
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -227,7 +238,14 @@
                 </span>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -252,125 +270,87 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Amazon Elastic Compute Cloud (Amazon EC2) provides virtual machines (VM) where you can host the same kinds of applications that you might run on a traditional on-premises server. This blog is to record what I learned about EC2 recently. </p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2020/12/28/2020-12-28-Elastic-Compute-Cloud/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+        <p>Amazon Elastic Compute Cloud (Amazon EC2) provides virtual machines (VM) where you can host the same kinds of applications that you might run on a traditional on-premises server. This blog is to record what I learned about EC2 recently. </p>
+<a id="more"></a>
+
+<h2 id="EC2-use-cases"><a href="#EC2-use-cases" class="headerlink" title="EC2 use cases"></a>EC2 use cases</h2><p>The use cases include Application servers, Web servers, Database servers, Game servers, Mail servers, Media servers Catalog servers, File servers, Computing servers, Proxy servers, and so on.</p>
+<h2 id="Choices-for-EC2-instance-launch"><a href="#Choices-for-EC2-instance-launch" class="headerlink" title="Choices for EC2 instance launch"></a>Choices for EC2 instance launch</h2><p>It includes AMI, Instance type, Network settings, IAM role, User data, Storage options, Tags, Security group, and Key pair.</p>
+<h3 id="AMI"><a href="#AMI" class="headerlink" title="AMI"></a>AMI</h3><p>An Amazon Machine Image (AMI) provides information that is required to launch an EC2 instance (i.e. a virtual machine that runs in the AWS Cloud). You must specify a source AMI when you launch an  instance. AMI contains a Windows or Linux OS. It also often has some software pre-installed.</p>
+<p>An AMI is created from an EC2 instance. Details are shown below.</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228181730.png"></p>
+<h3 id="Instance-Type"><a href="#Instance-Type" class="headerlink" title="Instance Type"></a>Instance Type</h3><p>The instance type that you choose determines - Memoery (RAM), Prcessing power (CPU), Disk space and disk type (Storage), and Network performance</p>
+<p>EC2 instance type naming and sizes: (Of course large size costs more money)</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228182758.png"></p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228182843.png"></p>
+<p>T3 instances: Use cases include websites and web applications, development environments, build servers, code repositories, microservices, test and staging environments, and line-of-business applications.</p>
+<p>C5 instances: Use cases include scientific modeling, batch processing, ad serving, highly scalable multiplayer gaming, and video encoding.</p>
+<p>R5 instances: Use cases include high-performance databases, data mining and analysis, in-memory databases, distributed web-scale in-memory caches, applications that perform real-time processing of unstructured big data, Apache Hadoop or Apache Spark clusters, and other enterprise applications</p>
+<h3 id="Specify-network-settings"><a href="#Specify-network-settings" class="headerlink" title="Specify network settings"></a>Specify network settings</h3><p>After you have chosen an AMI and an instance type, you must specify the network location where the EC2 instance will be deployed.</p>
+<p>When you launch an instance in a default VPC (i.e. you do not specify a VPC for the instance), AWS will assign it a public IP addressby default. When you launch an instance into a nondefault VPC (you got one), the subnet has an attribute that determines whether instances launched into that subnet receive a public IP address from the public IPv4 address pool.</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183332.png"></p>
+<h3 id="Attach-IAM-role"><a href="#Attach-IAM-role" class="headerlink" title="Attach IAM role"></a>Attach IAM role</h3><p>It is common to use EC2 instances to run an application that must make secure API calls to other AWS services. To support these use cases, AWS enables you to attach an AWS Identity and Access Management (IAM) role to an EC2 instance</p>
+<p>Note that you should never store AWS credentials on an EC2 instance. It is highly insecure. Instead, attach an IAM role to theEC2 instance. Also, note that IAM roles are used for short-term credentials and IAM group is used for permanent credentials.</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183706.png"></p>
+<h3 id="Storage-options"><a href="#Storage-options" class="headerlink" title="Storage options"></a>Storage options</h3><p>Amazon Elastic Block Store (Amazon EBS) is an easy-to-use, high-performance <code>durable block storage</code> service that is designed to be used with Amazon EC2 for both throughput- and transaction-intensive workloads. </p>
+<p>Amazon EC2 Instance Store provides <code>ephemeral, or temporary</code>, block-level stora ge for your instance. This storage is located on disks that are physically attached to the host computer. Instance Store works well when you must temporarily store information that changes frequently, such as buffers, caches, scratch data, and other temporary content.</p>
+<p>Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully managed elastic Network File System (NFS) file system for use with AWS Cloud services and on-premises resources. It is built to scale on-demand to petabytes without disrupting applications. It grows and shrinks automatically as you add and remove files, which reduces the need to provision and manage capacity to accommodate growth.</p>
+<p>Amazon Simple Storage Service (Amazon S3) is an object storage service that offers scalability, data availability, security, and performance. </p>
+<h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><p>A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize AWS resources, such as EC2 instances, in different ways. For example, you might tag instances by purpose, owner, or environment. Tagging is how you can attach metadata to an EC2 instance. </p>
+<h3 id="Security-group-settings"><a href="#Security-group-settings" class="headerlink" title="Security group settings"></a>Security group settings</h3><p>A security group is a set of firewall rules that control traffic to the instance.</p>
+<h3 id="Create-the-key-pair"><a href="#Create-the-key-pair" class="headerlink" title="Create the key pair"></a>Create the key pair</h3><p>Amazon EC2 uses public–key cryptography to encrypt and decrypt login information. The technology uses a public key to encrypt a piece of data, and then the recipient uses the private key to decrypt the data. The public and private keys are known as a key pair. Public-key cryptography enables you to securely access your instances by using a private key instead of a password.</p>
+<p>Reference: <a target="_blank" rel="noopener" href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
+
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://junyi07.github.io/2020/12/27/2020-12-27-hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/profile.jpg">
-      <meta itemprop="name" content="Junyi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Junyi's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2020/12/27/2020-12-27-hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-12-27 21:49:39 / Modified: 21:55:43" itemprop="dateCreated datePublished" datetime="2020-12-27T21:49:39-05:00">2020-12-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Some-thoughts/" itemprop="url" rel="index"><span itemprop="name">Some thoughts</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>950</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Hello everyone, this is my first blog and I am really excited! </p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2020/12/27/2020-12-27-hello-world/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Junyi
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://junyi07.github.io/2020/12/28/2020-12-28-Elastic-Compute-Cloud/" title="Elastic Compute Cloud">https://junyi07.github.io/2020/12/28/2020-12-28-Elastic-Compute-Cloud/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/blog/tags/AWS/" rel="tag"><i class="fa fa-tag"></i> AWS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2020/12/27/2020-12-27-hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -417,6 +397,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EC2-use-cases"><span class="nav-number">1.</span> <span class="nav-text">EC2 use cases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Choices-for-EC2-instance-launch"><span class="nav-number">2.</span> <span class="nav-text">Choices for EC2 instance launch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI"><span class="nav-number">2.1.</span> <span class="nav-text">AMI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Instance-Type"><span class="nav-number">2.2.</span> <span class="nav-text">Instance Type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specify-network-settings"><span class="nav-number">2.3.</span> <span class="nav-text">Specify network settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attach-IAM-role"><span class="nav-number">2.4.</span> <span class="nav-text">Attach IAM role</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storage-options"><span class="nav-number">2.5.</span> <span class="nav-text">Storage options</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tags"><span class="nav-number">2.6.</span> <span class="nav-text">Tags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security-group-settings"><span class="nav-number">2.7.</span> <span class="nav-text">Security group settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-the-key-pair"><span class="nav-number">2.8.</span> <span class="nav-text">Create the key pair</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -584,6 +565,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'b3a81bf1a6a8b08a7721',
+      clientSecret: 'fe79e4da113593d07bc58c6d123fa9a13f05b126',
+      repo        : 'blog',
+      owner       : 'junyi07',
+      admin       : ['junyi07'],
+      id          : 'f876b059abbeab3e30f08340a1d59d1b',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
   
 
