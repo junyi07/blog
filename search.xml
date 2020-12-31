@@ -60,7 +60,7 @@
   <entry>
     <title>AWS Storage</title>
     <url>/blog/2020/12/30/2020-12-30-AWS-Storage/</url>
-    <content><![CDATA[<p>This is a summary about AWS storage - EBS vs S3 vs EFS.</p>
+    <content><![CDATA[<p>This is a summary about AWS storage - Elastic Block Store (EBS) vs Simple Storage Service (S3) vs Elastic File System (EFS).</p>
 <a id="more"></a>
 
 <h2 id="EBS"><a href="#EBS" class="headerlink" title="EBS"></a>EBS</h2><p>Amazon Elastic Block Store (EBS) enables you to create individual storage volumes and attach them to a <strong>single</strong> Amazon EC2 instance. Amazon EBS offers block-level storage, where its volumes are automatically replicated within its Availability Zone. Amazon EBS is designed to provide durable, detachable, block-level storage (which is like an external hard drive) for your Amazon EC2 instances. Because they are directly attached to the instances, they can provide low latency between where the data is stored and where it might be used on the instance. </p>
@@ -68,7 +68,7 @@
 <p>What happens if you want to change one character in a 1-GB file? With block storage, you change only the block that contains the character. With object storage, the entire file must be updated. </p>
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230182426177.png"></p>
 <h3 id="Use-cases"><a href="#Use-cases" class="headerlink" title="Use cases"></a>Use cases</h3><p>You can use Amazon EBS volumes as primary storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application (NoSQL or Relational db). </p>
-<h2 id="S3"><a href="#S3" class="headerlink" title="S3"></a>S3</h2><p>Companies need the ability to simply and securely collect, store, and analyze their data on a massive scale. Amazon Amazon Simple Storage Service (S3) is object storage that is built to store and retrieve any amount of data from anywhere: websites and mobile apps, corporate applications, and data from Internet of Things (IoT) sensors or devices.</p>
+<h2 id="S3"><a href="#S3" class="headerlink" title="S3"></a>S3</h2><p>Companies need the ability to simply and securely collect, store, and analyze their data on a massive scale. Amazon Simple Storage Service (S3) is object storage that is built to store and retrieve any amount of data from anywhere: websites and mobile apps, corporate applications, and data from Internet of Things (IoT) sensors or devices.</p>
 <p>Amazon S3 is <strong>object-level storage</strong>, which means that if you want to change a part of a file, you must make the change and then re-upload the entire modified file. Amazon S3 stores data as objects within resources that are called <strong>buckets</strong>.</p>
 <p>The data that you store in Amazon S3 is not associated with any particular server, and you do not need manage any infrastructure yourself. You can put as many objects into Amazon S3 as you want. Objects can be almost any data file, such as images, videos, server logs, or test data.</p>
 <h3 id="Amazon-S3-storage-classes"><a href="#Amazon-S3-storage-classes" class="headerlink" title="Amazon S3 storage classes"></a>Amazon S3 storage classes</h3><p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183435976.png"></p>
