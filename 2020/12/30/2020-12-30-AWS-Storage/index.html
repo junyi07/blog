@@ -24,20 +24,19 @@
     var CONFIG = {"hostname":"junyi07.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="EBSAmazon Elastic Block Store (EBS) enables you to create individual storage volumes and attach them to a single Amazon EC2 instance. Amazon EBS offers block-level storage, where its volumes are autom">
+  <meta name="description" content="This is a summary about AWS storage - EBS vs S3 vs EFS.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS Storage">
 <meta property="og:url" content="https://junyi07.github.io/2020/12/30/2020-12-30-AWS-Storage/index.html">
 <meta property="og:site_name" content="Junyi&#39;s blog">
-<meta property="og:description" content="EBSAmazon Elastic Block Store (EBS) enables you to create individual storage volumes and attach them to a single Amazon EC2 instance. Amazon EBS offers block-level storage, where its volumes are autom">
+<meta property="og:description" content="This is a summary about AWS storage - EBS vs S3 vs EFS.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230182426177.png">
 <meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183435976.png">
 <meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183822993.png">
 <meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230190700084.png">
-<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230184658425.png">
 <meta property="article:published_time" content="2020-12-31T03:41:49.000Z">
-<meta property="article:modified_time" content="2020-12-31T03:47:20.846Z">
+<meta property="article:modified_time" content="2020-12-31T03:58:31.891Z">
 <meta property="article:author" content="Junyi">
 <meta property="article:tag" content="AWS">
 <meta name="twitter:card" content="summary">
@@ -226,7 +225,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-12-30 22:41:49 / Modified: 22:47:20" itemprop="dateCreated datePublished" datetime="2020-12-30T22:41:49-05:00">2020-12-30</time>
+              <time title="Created: 2020-12-30 22:41:49 / Modified: 22:58:31" itemprop="dateCreated datePublished" datetime="2020-12-30T22:41:49-05:00">2020-12-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -251,7 +250,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.9k</span>
+              <span>4.2k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -270,13 +269,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="EBS"><a href="#EBS" class="headerlink" title="EBS"></a>EBS</h2><p>Amazon Elastic Block Store (EBS) enables you to create individual storage volumes and attach them to a <strong>single</strong> Amazon EC2 instance. Amazon EBS offers block-level storage, where its volumes are automatically replicated within its Availability Zone. Amazon EBS is designed to provide durable, detachable, block-level storage (which is like an external hard drive) for your Amazon EC2 instances. Because they are directly attached to the instances, they can provide low latency between where the data is stored and where it might be used on the instance. </p>
+        <p>This is a summary about AWS storage - EBS vs S3 vs EFS.</p>
+<a id="more"></a>
+
+<h2 id="EBS"><a href="#EBS" class="headerlink" title="EBS"></a>EBS</h2><p>Amazon Elastic Block Store (EBS) enables you to create individual storage volumes and attach them to a <strong>single</strong> Amazon EC2 instance. Amazon EBS offers block-level storage, where its volumes are automatically replicated within its Availability Zone. Amazon EBS is designed to provide durable, detachable, block-level storage (which is like an external hard drive) for your Amazon EC2 instances. Because they are directly attached to the instances, they can provide low latency between where the data is stored and where it might be used on the instance. </p>
 <p>A backup of an Amazon EBS volume is called a <strong>snapshot</strong>. The first snapshot is called the baseline snapshot. Any other snapshot after the baseline captures only what is different from the previous snapshot. </p>
 <p>What happens if you want to change one character in a 1-GB file? With block storage, you change only the block that contains the character. With object storage, the entire file must be updated. </p>
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230182426177.png"></p>
 <h3 id="Use-cases"><a href="#Use-cases" class="headerlink" title="Use cases"></a>Use cases</h3><p>You can use Amazon EBS volumes as primary storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application (NoSQL or Relational db). </p>
 <h2 id="S3"><a href="#S3" class="headerlink" title="S3"></a>S3</h2><p>Companies need the ability to simply and securely collect, store, and analyze their data on a massive scale. Amazon Amazon Simple Storage Service (S3) is object storage that is built to store and retrieve any amount of data from anywhere: websites and mobile apps, corporate applications, and data from Internet of Things (IoT) sensors or devices.</p>
-<p>Amazon S3 is <code>object-level storage</code>, which means that if you want to change a part of a file, you must make the change and then re-upload the entire modified file. Amazon S3 stores data as objects within resources that are called <code>buckets</code>.</p>
+<p>Amazon S3 is <strong>object-level storage</strong>, which means that if you want to change a part of a file, you must make the change and then re-upload the entire modified file. Amazon S3 stores data as objects within resources that are called <strong>buckets</strong>.</p>
 <p>The data that you store in Amazon S3 is not associated with any particular server, and you do not need manage any infrastructure yourself. You can put as many objects into Amazon S3 as you want. Objects can be almost any data file, such as images, videos, server logs, or test data.</p>
 <h3 id="Amazon-S3-storage-classes"><a href="#Amazon-S3-storage-classes" class="headerlink" title="Amazon S3 storage classes"></a>Amazon S3 storage classes</h3><p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183435976.png"></p>
 <p>When you create a bucket in Amazon S3, it is associated with a specific AWS Region. When you store data in the bucket, it is redundantly stored across multiple AWS facilities within your selected Region. Amazon S3 is designed to durably store your data, even if there is concurrent data loss in two AWS facilities.</p>
@@ -298,8 +300,13 @@
 <p>Mount target: To access your file system, you must create mount targets in your VPC. </p>
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230190700084.png"></p>
 <h3 id="Use-cases-2"><a href="#Use-cases-2" class="headerlink" title="Use cases"></a>Use cases</h3><p>big data and analytics, media processing workflows, content management, web serving, and home directories. </p>
-<p>EFS key points:</p>
-<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230184658425.png"></p>
+<h3 id="Key-points"><a href="#Key-points" class="headerlink" title="Key points"></a>Key points</h3><ul>
+<li>Amazon EFS provides file storage over a network.</li>
+<li>Perfect for big data and analytics, media processing workflows content management, web serving, and home directories.</li>
+<li>Fully managed service that eliminates storage administration tasks</li>
+<li>Accessible from the console, an API, or the CLI.</li>
+<li>Scales up or down as files are added or removed and you pay for what you use.</li>
+</ul>
 <p>Reference: <a target="_blank" rel="noopener" href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
 
     </div>
@@ -399,7 +406,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EBS"><span class="nav-number">1.</span> <span class="nav-text">EBS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases"><span class="nav-number">1.1.</span> <span class="nav-text">Use cases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S3"><span class="nav-number">2.</span> <span class="nav-text">S3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-S3-storage-classes"><span class="nav-number">2.1.</span> <span class="nav-text">Amazon S3 storage classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-1"><span class="nav-number">2.2.</span> <span class="nav-text">Use cases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EFS"><span class="nav-number">3.</span> <span class="nav-text">EFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-2"><span class="nav-number">3.1.</span> <span class="nav-text">Use cases</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EBS"><span class="nav-number">1.</span> <span class="nav-text">EBS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases"><span class="nav-number">1.1.</span> <span class="nav-text">Use cases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S3"><span class="nav-number">2.</span> <span class="nav-text">S3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-S3-storage-classes"><span class="nav-number">2.1.</span> <span class="nav-text">Amazon S3 storage classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-1"><span class="nav-number">2.2.</span> <span class="nav-text">Use cases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EFS"><span class="nav-number">3.</span> <span class="nav-text">EFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-2"><span class="nav-number">3.1.</span> <span class="nav-text">Use cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-points"><span class="nav-number">3.2.</span> <span class="nav-text">Key points</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
