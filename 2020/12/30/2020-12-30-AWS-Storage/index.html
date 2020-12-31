@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183822993.png">
 <meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230190700084.png">
 <meta property="article:published_time" content="2020-12-31T03:41:49.000Z">
-<meta property="article:modified_time" content="2020-12-31T04:01:35.544Z">
+<meta property="article:modified_time" content="2020-12-31T15:53:51.956Z">
 <meta property="article:author" content="Junyi">
 <meta property="article:tag" content="AWS">
 <meta name="twitter:card" content="summary">
@@ -223,9 +223,8 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-12-30 22:41:49 / Modified: 23:01:35" itemprop="dateCreated datePublished" datetime="2020-12-30T22:41:49-05:00">2020-12-30</time>
+              <time title="Created: 2020-12-30 22:41:49" itemprop="dateCreated datePublished" datetime="2020-12-30T22:41:49-05:00">2020-12-30</time>
             </span>
             
             <span class="post-meta-item">
@@ -251,7 +250,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.3k</span>
+              <span>4.9k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -297,6 +296,18 @@
 <p>As a location for any application data, Amazon S3 buckets provide a shared location for storing objects that any instances of your application can access—including applications on Amazon EC2 or even traditional servers. This feature can be useful for user-generated media files, server logs, or other files that your application must store in a common location. Also, because the content can be fetched directly over the internet, you can offload serving that content from your application and enable clients to directly fetch the data from Amazon S3 themselves. </p>
 <p>For static web hosting, Amazon S3 buckets can serve the static contents of your website, including HTML, CSS, JavaScript, and other files. </p>
 <p>The high durability of Amazon S3 makes it a good candidate for storing backups of your data. For greater availability and disaster recovery capability, Amazon S3 can even be configured to support cross-Region replication so that data in an Amazon S3 bucket in one Region can be automatically replicated to another Amazon S3 Region.</p>
+<h3 id="S3-vs-S3-Glacier"><a href="#S3-vs-S3-Glacier" class="headerlink" title="S3 vs S3 Glacier"></a>S3 vs S3 Glacier</h3><ul>
+<li><p>Amazon S3 is designed for frequent, low-latency access to your data, but Amazon S3 Glacier is designed for low-cost, long-term storage of infrequently accessed data.</p>
+</li>
+<li><p>The maximum item size in Amazon S3 is 5 TB, but Amazon S3 Glacier can store items that are up to 40 TB.</p>
+</li>
+<li><p>Because Amazon S3 gives you faster access to your data, the storage cost per gigabyte is higher than it is with Amazon S3 Glacier. </p>
+</li>
+<li><p>While both services have per-request charges, Amazon S3 charges for PUT, COPY, POST, LIST, GET operations. In contrast, Amazon S3 Glacier charges for UPLOAD and retrieval operations.</p>
+</li>
+<li><p>Because Amazon S3 Glacier was designed for less-frequent access to data, it costs more for each retrieval request than Amazon S3. </p>
+</li>
+</ul>
 <h2 id="EFS"><a href="#EFS" class="headerlink" title="EFS"></a>EFS</h2><p>Amazon Elastic File System (Amazon EFS) is a fully managed service that makes it easy to set up and scale file storage in the AWS Cloud. Amazon EFS file systems can <strong>automatically scale</strong> from gigabytes to petabytes of data without the need to provision storage. Thousands of Amazon EC2 instances can access <strong>one</strong> Amazon EFS file system at the same time, and Amazon EFS is designed to provide consistent performance to each Amazon EC2 instance. Amazon EC2 instances that run in multiple Availability Zones within the same AWS Region can access the file system, so many users can access and share a common data source.</p>
 <p>Mount target: To access your file system, you must create mount targets in your VPC. </p>
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230190700084.png"></p>
@@ -407,7 +418,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EBS"><span class="nav-number">1.</span> <span class="nav-text">EBS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases"><span class="nav-number">1.1.</span> <span class="nav-text">Use cases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S3"><span class="nav-number">2.</span> <span class="nav-text">S3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-S3-storage-classes"><span class="nav-number">2.1.</span> <span class="nav-text">Amazon S3 storage classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-1"><span class="nav-number">2.2.</span> <span class="nav-text">Use cases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EFS"><span class="nav-number">3.</span> <span class="nav-text">EFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-2"><span class="nav-number">3.1.</span> <span class="nav-text">Use cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-points"><span class="nav-number">3.2.</span> <span class="nav-text">Key points</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EBS"><span class="nav-number">1.</span> <span class="nav-text">EBS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases"><span class="nav-number">1.1.</span> <span class="nav-text">Use cases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S3"><span class="nav-number">2.</span> <span class="nav-text">S3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-S3-storage-classes"><span class="nav-number">2.1.</span> <span class="nav-text">Amazon S3 storage classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-1"><span class="nav-number">2.2.</span> <span class="nav-text">Use cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S3-vs-S3-Glacier"><span class="nav-number">2.3.</span> <span class="nav-text">S3 vs S3 Glacier</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EFS"><span class="nav-number">3.</span> <span class="nav-text">EFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-2"><span class="nav-number">3.1.</span> <span class="nav-text">Use cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-points"><span class="nav-number">3.2.</span> <span class="nav-text">Key points</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -484,7 +495,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">9k</span>
+    <span title="Symbols count total">10k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
