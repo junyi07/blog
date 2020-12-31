@@ -57,4 +57,46 @@
         <tag>AWS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>AWS Storage</title>
+    <url>/blog/2020/12/30/2020-12-30-AWS-Storage/</url>
+    <content><![CDATA[<h2 id="EBS"><a href="#EBS" class="headerlink" title="EBS"></a>EBS</h2><p>Amazon Elastic Block Store (EBS) enables you to create individual storage volumes and attach them to a <strong>single</strong> Amazon EC2 instance. Amazon EBS offers block-level storage, where its volumes are automatically replicated within its Availability Zone. Amazon EBS is designed to provide durable, detachable, block-level storage (which is like an external hard drive) for your Amazon EC2 instances. Because they are directly attached to the instances, they can provide low latency between where the data is stored and where it might be used on the instance. </p>
+<p>A backup of an Amazon EBS volume is called a <strong>snapshot</strong>. The first snapshot is called the baseline snapshot. Any other snapshot after the baseline captures only what is different from the previous snapshot. </p>
+<p>What happens if you want to change one character in a 1-GB file? With block storage, you change only the block that contains the character. With object storage, the entire file must be updated. </p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230182426177.png"></p>
+<h3 id="Use-cases"><a href="#Use-cases" class="headerlink" title="Use cases"></a>Use cases</h3><p>You can use Amazon EBS volumes as primary storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application (NoSQL or Relational db). </p>
+<h2 id="S3"><a href="#S3" class="headerlink" title="S3"></a>S3</h2><p>Companies need the ability to simply and securely collect, store, and analyze their data on a massive scale. Amazon Amazon Simple Storage Service (S3) is object storage that is built to store and retrieve any amount of data from anywhere: websites and mobile apps, corporate applications, and data from Internet of Things (IoT) sensors or devices.</p>
+<p>Amazon S3 is <code>object-level storage</code>, which means that if you want to change a part of a file, you must make the change and then re-upload the entire modified file. Amazon S3 stores data as objects within resources that are called <code>buckets</code>.</p>
+<p>The data that you store in Amazon S3 is not associated with any particular server, and you do not need manage any infrastructure yourself. You can put as many objects into Amazon S3 as you want. Objects can be almost any data file, such as images, videos, server logs, or test data.</p>
+<h3 id="Amazon-S3-storage-classes"><a href="#Amazon-S3-storage-classes" class="headerlink" title="Amazon S3 storage classes"></a>Amazon S3 storage classes</h3><p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183435976.png"></p>
+<p>When you create a bucket in Amazon S3, it is associated with a specific AWS Region. When you store data in the bucket, it is redundantly stored across multiple AWS facilities within your selected Region. Amazon S3 is designed to durably store your data, even if there is concurrent data loss in two AWS facilities.</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183822993.png"></p>
+<h3 id="Use-cases-1"><a href="#Use-cases-1" class="headerlink" title="Use cases"></a>Use cases</h3><ul>
+<li><p>Backup and storage – Provide data backup and storage services for others, such as test data</p>
+</li>
+<li><p>Application hosting – Provide services that deploy, install, and manage web applications</p>
+</li>
+<li><p>Media hosting – Build a redundant, scalable, and highly available infrastructure that hosts video, photo, or music uploads and downloads</p>
+</li>
+<li><p>Software delivery – Host your software applications that customers can download.</p>
+</li>
+</ul>
+<p>As a location for any application data, Amazon S3 buckets provide a shared location for storing objects that any instances of your application can access—including applications on Amazon EC2 or even traditional servers. This feature can be useful for user-generated media files, server logs, or other files that your application must store in a common location. Also, because the content can be fetched directly over the internet, you can offload serving that content from your application and enable clients to directly fetch the data from Amazon S3 themselves. </p>
+<p>For static web hosting, Amazon S3 buckets can serve the static contents of your website, including HTML, CSS, JavaScript, and other files. </p>
+<p>The high durability of Amazon S3 makes it a good candidate for storing backups of your data. For greater availability and disaster recovery capability, Amazon S3 can even be configured to support cross-Region replication so that data in an Amazon S3 bucket in one Region can be automatically replicated to another Amazon S3 Region.</p>
+<h2 id="EFS"><a href="#EFS" class="headerlink" title="EFS"></a>EFS</h2><p>Amazon Elastic File System (Amazon EFS) is a fully managed service that makes it easy to set up and scale file storage in the AWS Cloud. Amazon EFS file systems can <strong>automatically scale</strong> from gigabytes to petabytes of data without the need to provision storage. Thousands of Amazon EC2 instances can access <strong>one</strong> Amazon EFS file system at the same time, and Amazon EFS is designed to provide consistent performance to each Amazon EC2 instance. Amazon EC2 instances that run in multiple Availability Zones within the same AWS Region can access the file system, so many users can access and share a common data source.</p>
+<p>Mount target: To access your file system, you must create mount targets in your VPC. </p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230190700084.png"></p>
+<h3 id="Use-cases-2"><a href="#Use-cases-2" class="headerlink" title="Use cases"></a>Use cases</h3><p>big data and analytics, media processing workflows, content management, web serving, and home directories. </p>
+<p>EFS key points:</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230184658425.png"></p>
+<p>Reference: <a href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
+]]></content>
+      <categories>
+        <category>AWS</category>
+      </categories>
+      <tags>
+        <tag>AWS</tag>
+      </tags>
+  </entry>
 </search>
