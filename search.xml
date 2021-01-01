@@ -285,9 +285,9 @@
 <li><p>Elastic Load Balancing then performs the required health checks and starts distributing traffic to that instance. Elastic Load Balancing routes traffic between EC2 instances and feeds metrics to Amazon CloudWatch.</p>
 </li>
 </ul>
-<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201231214454.png"></p>
-<p>Amazon CloudWatch, Amazon EC2 Auto Scaling, and Elastic Load Balancing work well individually. Together, however, they become more powerful and increase the control and flexibility over how your application handles customer demand.</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201231214454.png"><br>Amazon CloudWatch, Amazon EC2 Auto Scaling, and Elastic Load Balancing work well individually. Together, however, they become more powerful and increase the control and flexibility over how your application handles customer demand.</p>
 <p>A practice diagram:<br><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201231224652.png"></p>
+<p>Reference: <a href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
 ]]></content>
       <categories>
         <category>AWS</category>
