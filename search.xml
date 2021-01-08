@@ -221,7 +221,7 @@
   </entry>
   <entry>
     <title>AWS Auto Scaling and Monitoring</title>
-    <url>/blog/2020/12/31/2020-01-01-AWS-Auto-Scaling-and-Monitoring/</url>
+    <url>/blog/2021/01/01/2021-01-01-AWS-Auto-Scaling-and-Monitoring/</url>
     <content><![CDATA[<p>This post is talking about why  auto scaling in AWS is important and how load balancers in AWS work.</p>
 <a id="more"></a>
 
@@ -295,5 +295,46 @@
       <tags>
         <tag>AWS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Summary of 2020</title>
+    <url>/blog/2021/01/08/2021-01-08-Summary-of-2020/</url>
+    <content><![CDATA[<p>A general study summary of 2020. This year is tough, staying at home to take online courses, remote internship and so on. But there are still some good experiences to remember for me.</p>
+<a id="more"></a>
+
+<h2 id="2020-Timeline"><a href="#2020-Timeline" class="headerlink" title="2020 Timeline"></a>2020 Timeline</h2><ul>
+<li><p>January: Hang out with PQ</p>
+</li>
+<li><p>February - April:</p>
+<ol>
+<li>Spring term (hybrid courses)</li>
+<li>First time to be a TA for COMP 131</li>
+<li>Worked on a side project <a href="https://www.cartrek.us/home">Cartrek</a> (suspended when Covid-19 outbreak..)</li>
+</ol>
+</li>
+<li><p>May - July: Did remote Internship at Amazon and luckily got the return offer</p>
+<ol>
+<li>First time to worked in an all-English environment</li>
+<li>Learned a lot from awesome engineers in the team</li>
+</ol>
+</li>
+<li><p>August: Prepare for full-time job and applied for some big tech companies</p>
+<ol>
+<li>Got some companies OA, but got rejected by Facebook</li>
+<li>Google new graduate application did not open. So accepted offer</li>
+</ol>
+</li>
+<li><p>September - December:</p>
+<ol>
+<li>Fall term (online courses)</li>
+<li>Worked on a side project <a href="https://luowho.com/">Luowho</a> (WeChat mini-program)</li>
+<li>Worked on a side project <a href="https://offerland.ai/login">Offerland</a> (Startup)</li>
+</ol>
+</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>This year I definitely learn a lot from my internship, side projects, and courses. Although I only had two internship experiences so far, I feel like I got a huge improvement from each internship. Back to 2019,  my first internship taught me how an industry project works. The internship at Amazon taught me how to  make use of resources and deliver results. I also learned a lot from my excellent colleagues. They let me know what a good engineer looks like. A good engineer can not only deliver results in time but also have strong ownership to the projects you own. Of course communication skills and being helpful to people are  important to a good engineer as well.</p>
+<p>In addition, this year I did some side projects, which I think is precious experiences to me. My motivation is to work on some impactful projects that can benefit people’s life. In the past, I did some toy projects as well, but nobody will visit them or it is not user’s pain point. However, the projects I did this year is different. By developing <a href="https://offerland.ai/login">Offerland</a>, I learned to build a web app from scratch as well as learn Django and AWS deployment. By working on <a href="https://luowho.com/">Luowho</a>, I learned to optimize our microservice infrastructure and deploy the backend server on Tomcat. Except professional knowledge, the other thing that makes me glad is that I made some good friends who work on the same projects with me and have the same passion about programming.</p>
+<p>I sincerely appreciate all help from my friends and colleagues in 2020. Hope everything would be better this year!</p>
+]]></content>
   </entry>
 </search>

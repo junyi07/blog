@@ -24,38 +24,28 @@
     var CONFIG = {"hostname":"junyi07.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="This is a summary about AWS storage - Elastic Block Store (EBS) vs Simple Storage Service (S3) vs Elastic File System (EFS).">
-<meta property="og:type" content="article">
-<meta property="og:title" content="AWS Storage">
-<meta property="og:url" content="https://junyi07.github.io/2020/12/30/2020-12-30-AWS-Storage/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Junyi&#39;s blog">
+<meta property="og:url" content="https://junyi07.github.io/page/2/index.html">
 <meta property="og:site_name" content="Junyi&#39;s blog">
-<meta property="og:description" content="This is a summary about AWS storage - Elastic Block Store (EBS) vs Simple Storage Service (S3) vs Elastic File System (EFS).">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230182426177.png">
-<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183435976.png">
-<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183822993.png">
-<meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230190700084.png">
-<meta property="article:published_time" content="2020-12-31T03:41:49.000Z">
-<meta property="article:modified_time" content="2020-12-31T15:53:51.956Z">
 <meta property="article:author" content="Junyi">
-<meta property="article:tag" content="AWS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230182426177.png">
 
-<link rel="canonical" href="https://junyi07.github.io/2020/12/30/2020-12-30-AWS-Storage/">
+<link rel="canonical" href="https://junyi07.github.io/page/2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
-    isPost : true,
+    isHome : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>AWS Storage | Junyi's blog</title>
+  <title>Junyi's blog</title>
   
 
 
@@ -194,14 +184,13 @@
         <div class="content-wrap">
           
 
-          <div class="content post posts-expand">
+          <div class="content index posts-expand">
             
-
-    
+      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://junyi07.github.io/2020/12/30/2020-12-30-AWS-Storage/">
+    <link itemprop="mainEntityOfPage" href="https://junyi07.github.io/2020/12/27/2020-12-27-hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/profile.jpg">
@@ -213,9 +202,10 @@
       <meta itemprop="name" content="Junyi's blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          AWS Storage
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2020/12/27/2020-12-27-hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -223,8 +213,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-12-30 22:41:49" itemprop="dateCreated datePublished" datetime="2020-12-30T22:41:49-05:00">2020-12-30</time>
+              <time title="Created: 2020-12-27 21:49:39 / Modified: 21:55:43" itemprop="dateCreated datePublished" datetime="2020-12-27T21:49:39-05:00">2020-12-27</time>
             </span>
             
             <span class="post-meta-item">
@@ -233,31 +224,24 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/AWS/" itemprop="url" rel="index"><span itemprop="name">AWS</span></a>
+                  <a href="/blog/categories/Some-thoughts/" itemprop="url" rel="index"><span itemprop="name">Some thoughts</span></a>
                 </span>
             </span>
 
-          
-            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span><br>
+          <br>
             <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.9k</span>
+              <span>950</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>4 mins.</span>
+              <span>1 mins.</span>
             </span>
 
         </div>
@@ -269,112 +253,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>This is a summary about AWS storage - Elastic Block Store (EBS) vs Simple Storage Service (S3) vs Elastic File System (EFS).</p>
-<a id="more"></a>
-
-<h2 id="EBS"><a href="#EBS" class="headerlink" title="EBS"></a>EBS</h2><p>Amazon Elastic Block Store (EBS) enables you to create individual storage volumes and attach them to a <strong>single</strong> Amazon EC2 instance. Amazon EBS offers block-level storage, where its volumes are automatically replicated within its Availability Zone. Amazon EBS is designed to provide durable, detachable, block-level storage (which is like an external hard drive) for your Amazon EC2 instances. Because they are directly attached to the instances, they can provide low latency between where the data is stored and where it might be used on the instance. </p>
-<p>A backup of an Amazon EBS volume is called a <strong>snapshot</strong>. The first snapshot is called the baseline snapshot. Any other snapshot after the baseline captures only what is different from the previous snapshot. </p>
-<p>What happens if you want to change one character in a 1-GB file? With block storage, you change only the block that contains the character. With object storage, the entire file must be updated. </p>
-<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230182426177.png"></p>
-<h3 id="Use-cases"><a href="#Use-cases" class="headerlink" title="Use cases"></a>Use cases</h3><p>You can use Amazon EBS volumes as primary storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application (NoSQL or Relational db). </p>
-<h2 id="S3"><a href="#S3" class="headerlink" title="S3"></a>S3</h2><p>Companies need the ability to simply and securely collect, store, and analyze their data on a massive scale. Amazon Simple Storage Service (S3) is object storage that is built to store and retrieve any amount of data from anywhere: websites and mobile apps, corporate applications, and data from Internet of Things (IoT) sensors or devices.</p>
-<p>Amazon S3 is <strong>object-level storage</strong>, which means that if you want to change a part of a file, you must make the change and then re-upload the entire modified file. Amazon S3 stores data as objects within resources that are called <strong>buckets</strong>.</p>
-<p>The data that you store in Amazon S3 is not associated with any particular server, and you do not need manage any infrastructure yourself. You can put as many objects into Amazon S3 as you want. Objects can be almost any data file, such as images, videos, server logs, or test data.</p>
-<h3 id="Amazon-S3-storage-classes"><a href="#Amazon-S3-storage-classes" class="headerlink" title="Amazon S3 storage classes"></a>Amazon S3 storage classes</h3><p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183435976.png"></p>
-<p>When you create a bucket in Amazon S3, it is associated with a specific AWS Region. When you store data in the bucket, it is redundantly stored across multiple AWS facilities within your selected Region. Amazon S3 is designed to durably store your data, even if there is concurrent data loss in two AWS facilities.</p>
-<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230183822993.png"></p>
-<h3 id="Use-cases-1"><a href="#Use-cases-1" class="headerlink" title="Use cases"></a>Use cases</h3><ul>
-<li><p>Backup and storage – Provide data backup and storage services for others, such as test data</p>
-</li>
-<li><p>Application hosting – Provide services that deploy, install, and manage web applications</p>
-</li>
-<li><p>Media hosting – Build a redundant, scalable, and highly available infrastructure that hosts video, photo, or music uploads and downloads</p>
-</li>
-<li><p>Software delivery – Host your software applications that customers can download.</p>
-</li>
-</ul>
-<p>As a location for any application data, Amazon S3 buckets provide a shared location for storing objects that any instances of your application can access—including applications on Amazon EC2 or even traditional servers. This feature can be useful for user-generated media files, server logs, or other files that your application must store in a common location. Also, because the content can be fetched directly over the internet, you can offload serving that content from your application and enable clients to directly fetch the data from Amazon S3 themselves. </p>
-<p>For static web hosting, Amazon S3 buckets can serve the static contents of your website, including HTML, CSS, JavaScript, and other files. </p>
-<p>The high durability of Amazon S3 makes it a good candidate for storing backups of your data. For greater availability and disaster recovery capability, Amazon S3 can even be configured to support cross-Region replication so that data in an Amazon S3 bucket in one Region can be automatically replicated to another Amazon S3 Region.</p>
-<h3 id="S3-vs-S3-Glacier"><a href="#S3-vs-S3-Glacier" class="headerlink" title="S3 vs S3 Glacier"></a>S3 vs S3 Glacier</h3><ul>
-<li><p>Amazon S3 is designed for frequent, low-latency access to your data, but Amazon S3 Glacier is designed for low-cost, long-term storage of infrequently accessed data.</p>
-</li>
-<li><p>The maximum item size in Amazon S3 is 5 TB, but Amazon S3 Glacier can store items that are up to 40 TB.</p>
-</li>
-<li><p>Because Amazon S3 gives you faster access to your data, the storage cost per gigabyte is higher than it is with Amazon S3 Glacier. </p>
-</li>
-<li><p>While both services have per-request charges, Amazon S3 charges for PUT, COPY, POST, LIST, GET operations. In contrast, Amazon S3 Glacier charges for UPLOAD and retrieval operations.</p>
-</li>
-<li><p>Because Amazon S3 Glacier was designed for less-frequent access to data, it costs more for each retrieval request than Amazon S3. </p>
-</li>
-</ul>
-<h2 id="EFS"><a href="#EFS" class="headerlink" title="EFS"></a>EFS</h2><p>Amazon Elastic File System (Amazon EFS) is a fully managed service that makes it easy to set up and scale file storage in the AWS Cloud. Amazon EFS file systems can <strong>automatically scale</strong> from gigabytes to petabytes of data without the need to provision storage. Thousands of Amazon EC2 instances can access <strong>one</strong> Amazon EFS file system at the same time, and Amazon EFS is designed to provide consistent performance to each Amazon EC2 instance. Amazon EC2 instances that run in multiple Availability Zones within the same AWS Region can access the file system, so many users can access and share a common data source.</p>
-<p>Mount target: To access your file system, you must create mount targets in your VPC. </p>
-<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/image-20201230190700084.png"></p>
-<h3 id="Use-cases-2"><a href="#Use-cases-2" class="headerlink" title="Use cases"></a>Use cases</h3><p>big data and analytics, media processing workflows, content management, web serving, and home directories. </p>
-<h3 id="Key-points"><a href="#Key-points" class="headerlink" title="Key points"></a>Key points</h3><ul>
-<li>Amazon EFS provides file storage over a network.</li>
-<li>Perfect for big data and analytics, media processing workflows content management, web serving, and home directories.</li>
-<li>Fully managed service that eliminates storage administration tasks</li>
-<li>Accessible from the console, an API, or the CLI.</li>
-<li>Scales up or down as files are added or removed and you pay for what you use.</li>
-</ul>
-<p>Reference: <a target="_blank" rel="noopener" href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
-
+          <p>Hello everyone, this is my first blog and I am really excited! </p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2020/12/27/2020-12-27-hello-world/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
     </div>
 
     
     
     
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>Post author:  </strong>Junyi
-  </li>
-  <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://junyi07.github.io/2020/12/30/2020-12-30-AWS-Storage/" title="AWS Storage">https://junyi07.github.io/2020/12/30/2020-12-30-AWS-Storage/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
-  </li>
-</ul>
-</div>
-
-
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/blog/tags/AWS/" rel="tag"><i class="fa fa-tag"></i> AWS</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/blog/2020/12/28/2020-12-28-Elastic-Compute-Cloud/" rel="prev" title="Elastic Compute Cloud">
-      <i class="fa fa-chevron-left"></i> Elastic Compute Cloud
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/blog/2020/12/31/2020-12-31-AWS-Database/" rel="next" title="AWS Database">
-      AWS Database <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
+        <div class="post-eof"></div>
       </footer>
-    
   </article>
   
   
   
 
 
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/blog/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -421,7 +332,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EBS"><span class="nav-number">1.</span> <span class="nav-text">EBS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases"><span class="nav-number">1.1.</span> <span class="nav-text">Use cases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S3"><span class="nav-number">2.</span> <span class="nav-text">S3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-S3-storage-classes"><span class="nav-number">2.1.</span> <span class="nav-text">Amazon S3 storage classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-1"><span class="nav-number">2.2.</span> <span class="nav-text">Use cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S3-vs-S3-Glacier"><span class="nav-number">2.3.</span> <span class="nav-text">S3 vs S3 Glacier</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EFS"><span class="nav-number">3.</span> <span class="nav-text">EFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-cases-2"><span class="nav-number">3.1.</span> <span class="nav-text">Use cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-points"><span class="nav-number">3.2.</span> <span class="nav-text">Key points</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -589,25 +499,6 @@
 
   
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : 'b3a81bf1a6a8b08a7721',
-      clientSecret: 'fe79e4da113593d07bc58c6d123fa9a13f05b126',
-      repo        : 'blog',
-      owner       : 'junyi07',
-      admin       : ['junyi07'],
-      id          : 'c493d06621acefce3d86604c71315416',
-        language: 'en',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
 
   
 
