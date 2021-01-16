@@ -39,7 +39,7 @@
 <p>When you launch an instance in a default VPC (i.e. you do not specify a VPC for the instance), AWS will assign it a public IP addressby default. When you launch an instance into a nondefault VPC (you got one), the subnet has an attribute that determines whether instances launched into that subnet receive a public IP address from the public IPv4 address pool.</p>
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183332.png"></p>
 <h3 id="Attach-IAM-role"><a href="#Attach-IAM-role" class="headerlink" title="Attach IAM role"></a>Attach IAM role</h3><p>It is common to use EC2 instances to run an application that must make secure API calls to other AWS services. To support these use cases, AWS enables you to attach an AWS Identity and Access Management (IAM) role to an EC2 instance</p>
-<p>Note that you should never store AWS credentials on an EC2 instance. It is highly insecure. Instead, attach an IAM role to theEC2 instance. Also, note that IAM roles are used for short-term credentials and IAM group is used for permanent credentials.</p>
+<p>Note that you should never store AWS credentials on an EC2 instance. It is highly insecure. Instead, attach an IAM role to the EC2 instance. Also, note that IAM roles are used for short-term credentials and IAM group is used for permanent credentials.</p>
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183706.png"></p>
 <h3 id="Storage-options"><a href="#Storage-options" class="headerlink" title="Storage options"></a>Storage options</h3><p>Amazon Elastic Block Store (Amazon EBS) is an easy-to-use, high-performance <code>durable block storage</code> service that is designed to be used with Amazon EC2 for both throughput- and transaction-intensive workloads. </p>
 <p>Amazon EC2 Instance Store provides <code>ephemeral, or temporary</code>, block-level stora ge for your instance. This storage is located on disks that are physically attached to the host computer. Instance Store works well when you must temporarily store information that changes frequently, such as buffers, caches, scratch data, and other temporary content.</p>
@@ -48,8 +48,9 @@
 <h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><p>A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize AWS resources, such as EC2 instances, in different ways. For example, you might tag instances by purpose, owner, or environment. Tagging is how you can attach metadata to an EC2 instance. </p>
 <h3 id="Security-group-settings"><a href="#Security-group-settings" class="headerlink" title="Security group settings"></a>Security group settings</h3><p>A security group is a set of firewall rules that control traffic to the instance.</p>
 <h3 id="Create-the-key-pair"><a href="#Create-the-key-pair" class="headerlink" title="Create the key pair"></a>Create the key pair</h3><p>Amazon EC2 uses public–key cryptography to encrypt and decrypt login information. The technology uses a public key to encrypt a piece of data, and then the recipient uses the private key to decrypt the data. The public and private keys are known as a key pair. Public-key cryptography enables you to securely access your instances by using a private key instead of a password.</p>
-<h3 id="Elastic-beanstalk-with-EC2"><a href="#Elastic-beanstalk-with-EC2" class="headerlink" title="Elastic beanstalk with EC2"></a>Elastic beanstalk with EC2</h3><p>When you create a web server environment, AWS Elastic Beanstalk creates one or more Amazon Elastic Compute Cloud (Amazon EC2) virtual machines, known as Instances.</p>
+<h3 id="Elastic-Beanstalk-with-EC2"><a href="#Elastic-Beanstalk-with-EC2" class="headerlink" title="Elastic Beanstalk with EC2"></a>Elastic Beanstalk with EC2</h3><p>When you create a web server environment, AWS Elastic Beanstalk creates one or more Amazon Elastic Compute Cloud (Amazon EC2) virtual machines, known as Instances.</p>
 <p>Reference: <a href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
+<p>Thank you for reading!</p>
 ]]></content>
       <categories>
         <category>AWS</category>
@@ -112,6 +113,7 @@
 <li>Scales up or down as files are added or removed and you pay for what you use.</li>
 </ul>
 <p>Reference: <a href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
+<p>Thank you for reading!</p>
 ]]></content>
       <categories>
         <category>AWS</category>
@@ -211,6 +213,7 @@
 <p>After a database crash, Amazon Aurora does not need to replay the redo log from the last database checkpoint. Instead, it performs this on every read operation. This reduces the restart time after a database crash to less than 60 seconds in most cases.</p>
 <p>With Amazon Aurora, the buffer cache is moved out of the database process, which makes it available immediately at restart. This reduces the need for you to throttle access until the cache is repopulated to avoid brownouts.</p>
 <p>Reference: <a href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
+<p>Thank you for reading!</p>
 ]]></content>
       <categories>
         <category>AWS</category>
@@ -288,6 +291,7 @@
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201231214454.png"><br>Amazon CloudWatch, Amazon EC2 Auto Scaling, and Elastic Load Balancing work well individually. Together, however, they become more powerful and increase the control and flexibility over how your application handles customer demand.</p>
 <p>A practice diagram:<br><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201231224652.png"></p>
 <p>Reference: <a href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
+<p>Thank you for reading!</p>
 ]]></content>
       <categories>
         <category>AWS</category>
@@ -327,15 +331,70 @@
 </ol>
 </li>
 </ul>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>This year I definitely learn a lot from my internship, side projects, and courses. Although I only had two internship experiences so far, I feel like I got a huge improvement from each internship. Back to 2019,  my first internship taught me how an industry project works. The internship at Amazon taught me how to  make use of resources and deliver results. I also learned a lot from my excellent colleagues. They let me know what a good engineer looks like. A good engineer can not only deliver results in time but also have strong ownership to the projects you own. Of course communication skills and being helpful to people are  important to a good engineer as well.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>This year I definitely learned a lot from my internship, side projects, and courses. Although I only had two internship experiences so far, I feel like I got a huge improvement from each internship. Back to 2019,  my first internship taught me how an industry project works. The internship at Amazon taught me how to  make use of resources and deliver results. I also learned a lot from my excellent colleagues. They let me know what a good engineer looks like. A good engineer can not only deliver results in time but also have strong ownership to the projects you own. Of course communication skills and being helpful to people are  important to a good engineer as well.</p>
 <p>In addition, this year I did some side projects, which I think is precious experiences to me. My motivation is to work on some impactful projects that can benefit people’s life. In the past, I did some toy projects as well, but nobody will visit them or it is not user’s pain point. However, the projects I did this year is different. By developing <a href="https://offerland.ai/login">Offerland</a>, I learned to build a web app from scratch as well as learn Django and AWS deployment. By working on <a href="https://luowho.com/">Luowho</a>, I learned to optimize our microservice infrastructure and deploy the backend server on Tomcat. Except professional knowledge, the other thing that makes me glad is that I made some good friends who work on the same projects with me and have the same passion about programming.</p>
 <p>I sincerely appreciate all help from my friends and colleagues in 2020. Hope everything would be better this year!</p>
+<p>Thank you for reading!</p>
 ]]></content>
       <categories>
         <category>Summary</category>
       </categories>
       <tags>
         <tag>Summary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2021-01-15-Nginx-and-Gunicorn</title>
+    <url>/blog/2021/01/15/2021-01-15-Nginx-and-Gunicorn/</url>
+    <content><![CDATA[<p>Recently I learned to deploy Django project on Elastic Beanstalk. My original thought is I get a VM and then run the app locally. However, the fact is that the way has not gone through security audits or performance tests. This article will introduce Nginx and Gunicorn in EC2 instance.</p>
+<a id="more"></a>
+
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p>Nginx is where requests from the internet arrive first. It can handle them very quickly, and is usually configured to only let those requests through, which really need to arrive at your web application.</p>
+<h3 id="Things-it-is-great-at"><a href="#Things-it-is-great-at" class="headerlink" title="Things it is great at"></a>Things it is great at</h3><ul>
+<li><p>Take care of domain name routing (decides where requests should go)</p>
+</li>
+<li><p>Handle lots of requests coming in at once</p>
+</li>
+<li><p>Serve static files from disk (e.g. css and js files)</p>
+</li>
+<li><p>load balancing and caching..</p>
+</li>
+<li><p>Forward requests which need to be dynamic to Gunicorn</p>
+</li>
+<li><p>Terminate SSL (i.e. decrypt https traffic to use the host header information)</p>
+</li>
+<li><p>Save computing resources (CPU and memory) compared to your Python code</p>
+</li>
+</ul>
+<h3 id="Things-it-can-not-do"><a href="#Things-it-can-not-do" class="headerlink" title="Things it can not do"></a>Things it can not do</h3><ul>
+<li>Running Python web applications for you</li>
+<li>Translate requests into WSGI</li>
+</ul>
+<h2 id="Gunicorn"><a href="#Gunicorn" class="headerlink" title="Gunicorn"></a>Gunicorn</h2><p>Gunicorn translates requests which it gets from Nginx into a format which your web application can handle, and makes sure that your code is executed when needed. Gunicorn is one of the examples for a <strong>WSGI server</strong>.</p>
+<h3 id="Things-it-is-great-at-1"><a href="#Things-it-is-great-at-1" class="headerlink" title="Things it is great at"></a>Things it is great at</h3><ul>
+<li>Running a pool of worker processes/threads (executing your code!)</li>
+<li>Translate requests coming in from Nginx to be WSGI compatible</li>
+<li>Translate the WSGI responses of your app into proper http responses</li>
+<li>Actually calls your Python code when a request comes in</li>
+<li>Gunicorn can talk to different web servers</li>
+</ul>
+<h3 id="Things-it-can-not-do-1"><a href="#Things-it-can-not-do-1" class="headerlink" title="Things it can not do"></a>Things it can not do</h3><ul>
+<li>Not prepared to be front-facing: easy to DOS and overwhelm</li>
+<li>Can’t terminate SSL (no https handling)</li>
+<li>Do the job of a webserver like Nginx</li>
+</ul>
+<h2 id="EC2-instance-with-EB"><a href="#EC2-instance-with-EB" class="headerlink" title="EC2 instance with EB"></a>EC2 instance with EB</h2><p>Back to the Dajngo project I am working on, the EC2 instances in EB are using Nginx and Gunicorn. The whole structure is showing in the picture. Basically, when new HTTPs requests come, load balancer does two things.  Firstly, it terminate SSL by https handling. Secondly, it forward the requet to an appropriate instance. In Gunicorn, each work processor will run the django code, and the master workers will manages the list of running workers by listening for some signals. These workers can access to external database. I mean EB also support to use integrated DB instance, but we use the external DB in the project.</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20210115190557.png"></p>
+<p>Reference: <a href="https://vsupalov.com/gunicorn-and-nginx/">Gunicorn and Nginx in a Nutshell</a></p>
+<p>Thank you for reading!</p>
+]]></content>
+      <categories>
+        <category>AWS</category>
+      </categories>
+      <tags>
+        <tag>AWS</tag>
+        <tag>Nginx</tag>
+        <tag>Gunicorn</tag>
       </tags>
   </entry>
 </search>

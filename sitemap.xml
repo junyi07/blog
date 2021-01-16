@@ -2,37 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://junyi07.github.io/2021/01/15/2021-01-15-Nginx-and-Gunicorn/</loc>
+    
+    <lastmod>2021-01-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://junyi07.github.io/2021/01/08/2021-01-08-Summary-of-2020/</loc>
     
-    <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://junyi07.github.io/2021/01/01/2021-01-01-AWS-Auto-Scaling-and-Monitoring/</loc>
-    
-    <lastmod>2021-01-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://junyi07.github.io/2020/12/31/2020-12-31-AWS-Database/</loc>
-    
-    <lastmod>2021-01-01</lastmod>
+    <lastmod>2021-01-16</lastmod>
     
   </url>
   
   <url>
     <loc>https://junyi07.github.io/2020/12/30/2020-12-30-AWS-Storage/</loc>
     
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/2021/01/01/2021-01-01-AWS-Auto-Scaling-and-Monitoring/</loc>
+    
+    <lastmod>2021-01-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/2020/12/31/2020-12-31-AWS-Database/</loc>
+    
+    <lastmod>2021-01-16</lastmod>
     
   </url>
   
   <url>
     <loc>https://junyi07.github.io/2020/12/28/2020-12-28-Elastic-Compute-Cloud/</loc>
     
-    <lastmod>2020-12-31</lastmod>
+    <lastmod>2021-01-16</lastmod>
     
   </url>
   
@@ -79,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://junyi07.github.io/lib/bookmark/renovate.json</loc>
+    <loc>https://junyi07.github.io/lib/bookmark/package.json</loc>
     
     <lastmod>2020-12-23</lastmod>
     
   </url>
   
   <url>
-    <loc>https://junyi07.github.io/lib/bookmark/package.json</loc>
+    <loc>https://junyi07.github.io/lib/bookmark/renovate.json</loc>
     
     <lastmod>2020-12-23</lastmod>
     
@@ -116,7 +123,7 @@
 
   <url>
     <loc>https://junyi07.github.io/</loc>
-    <lastmod>2021-01-08</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,21 +131,35 @@
   
   <url>
     <loc>https://junyi07.github.io/tags/Thoughts/</loc>
-    <lastmod>2021-01-08</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://junyi07.github.io/tags/AWS/</loc>
-    <lastmod>2021-01-08</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://junyi07.github.io/tags/Summary/</loc>
-    <lastmod>2021-01-08</lastmod>
+    <lastmod>2021-01-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/tags/Nginx/</loc>
+    <lastmod>2021-01-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://junyi07.github.io/tags/Gunicorn/</loc>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -147,21 +168,21 @@
   
   <url>
     <loc>https://junyi07.github.io/categories/Some-thoughts/</loc>
-    <lastmod>2021-01-08</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://junyi07.github.io/categories/AWS/</loc>
-    <lastmod>2021-01-08</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://junyi07.github.io/categories/Summary/</loc>
-    <lastmod>2021-01-08</lastmod>
+    <lastmod>2021-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

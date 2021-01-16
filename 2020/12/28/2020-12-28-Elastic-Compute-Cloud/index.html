@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183332.png">
 <meta property="og:image" content="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183706.png">
 <meta property="article:published_time" content="2020-12-29T02:30:06.000Z">
-<meta property="article:modified_time" content="2020-12-31T04:19:52.496Z">
+<meta property="article:modified_time" content="2021-01-16T02:06:37.636Z">
 <meta property="article:author" content="Junyi">
 <meta property="article:tag" content="AWS">
 <meta name="twitter:card" content="summary">
@@ -251,7 +251,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>4.2k</span>
+              <span>4.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -289,7 +289,7 @@
 <p>When you launch an instance in a default VPC (i.e. you do not specify a VPC for the instance), AWS will assign it a public IP addressby default. When you launch an instance into a nondefault VPC (you got one), the subnet has an attribute that determines whether instances launched into that subnet receive a public IP address from the public IPv4 address pool.</p>
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183332.png"></p>
 <h3 id="Attach-IAM-role"><a href="#Attach-IAM-role" class="headerlink" title="Attach IAM role"></a>Attach IAM role</h3><p>It is common to use EC2 instances to run an application that must make secure API calls to other AWS services. To support these use cases, AWS enables you to attach an AWS Identity and Access Management (IAM) role to an EC2 instance</p>
-<p>Note that you should never store AWS credentials on an EC2 instance. It is highly insecure. Instead, attach an IAM role to theEC2 instance. Also, note that IAM roles are used for short-term credentials and IAM group is used for permanent credentials.</p>
+<p>Note that you should never store AWS credentials on an EC2 instance. It is highly insecure. Instead, attach an IAM role to the EC2 instance. Also, note that IAM roles are used for short-term credentials and IAM group is used for permanent credentials.</p>
 <p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20201228183706.png"></p>
 <h3 id="Storage-options"><a href="#Storage-options" class="headerlink" title="Storage options"></a>Storage options</h3><p>Amazon Elastic Block Store (Amazon EBS) is an easy-to-use, high-performance <code>durable block storage</code> service that is designed to be used with Amazon EC2 for both throughput- and transaction-intensive workloads. </p>
 <p>Amazon EC2 Instance Store provides <code>ephemeral, or temporary</code>, block-level stora ge for your instance. This storage is located on disks that are physically attached to the host computer. Instance Store works well when you must temporarily store information that changes frequently, such as buffers, caches, scratch data, and other temporary content.</p>
@@ -298,8 +298,9 @@
 <h3 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h3><p>A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize AWS resources, such as EC2 instances, in different ways. For example, you might tag instances by purpose, owner, or environment. Tagging is how you can attach metadata to an EC2 instance. </p>
 <h3 id="Security-group-settings"><a href="#Security-group-settings" class="headerlink" title="Security group settings"></a>Security group settings</h3><p>A security group is a set of firewall rules that control traffic to the instance.</p>
 <h3 id="Create-the-key-pair"><a href="#Create-the-key-pair" class="headerlink" title="Create the key pair"></a>Create the key pair</h3><p>Amazon EC2 uses public–key cryptography to encrypt and decrypt login information. The technology uses a public key to encrypt a piece of data, and then the recipient uses the private key to decrypt the data. The public and private keys are known as a key pair. Public-key cryptography enables you to securely access your instances by using a private key instead of a password.</p>
-<h3 id="Elastic-beanstalk-with-EC2"><a href="#Elastic-beanstalk-with-EC2" class="headerlink" title="Elastic beanstalk with EC2"></a>Elastic beanstalk with EC2</h3><p>When you create a web server environment, AWS Elastic Beanstalk creates one or more Amazon Elastic Compute Cloud (Amazon EC2) virtual machines, known as Instances.</p>
+<h3 id="Elastic-Beanstalk-with-EC2"><a href="#Elastic-Beanstalk-with-EC2" class="headerlink" title="Elastic Beanstalk with EC2"></a>Elastic Beanstalk with EC2</h3><p>When you create a web server environment, AWS Elastic Beanstalk creates one or more Amazon Elastic Compute Cloud (Amazon EC2) virtual machines, known as Instances.</p>
 <p>Reference: <a target="_blank" rel="noopener" href="https://aws.amazon.com/training/awsacademy/">AWS Academy</a></p>
+<p>Thank you for reading!</p>
 
     </div>
 
@@ -401,7 +402,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EC2-use-cases"><span class="nav-number">1.</span> <span class="nav-text">EC2 use cases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Choices-for-EC2-instance-launch"><span class="nav-number">2.</span> <span class="nav-text">Choices for EC2 instance launch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI"><span class="nav-number">2.1.</span> <span class="nav-text">AMI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Instance-Type"><span class="nav-number">2.2.</span> <span class="nav-text">Instance Type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specify-network-settings"><span class="nav-number">2.3.</span> <span class="nav-text">Specify network settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attach-IAM-role"><span class="nav-number">2.4.</span> <span class="nav-text">Attach IAM role</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storage-options"><span class="nav-number">2.5.</span> <span class="nav-text">Storage options</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tags"><span class="nav-number">2.6.</span> <span class="nav-text">Tags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security-group-settings"><span class="nav-number">2.7.</span> <span class="nav-text">Security group settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-the-key-pair"><span class="nav-number">2.8.</span> <span class="nav-text">Create the key pair</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Elastic-beanstalk-with-EC2"><span class="nav-number">2.9.</span> <span class="nav-text">Elastic beanstalk with EC2</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EC2-use-cases"><span class="nav-number">1.</span> <span class="nav-text">EC2 use cases</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Choices-for-EC2-instance-launch"><span class="nav-number">2.</span> <span class="nav-text">Choices for EC2 instance launch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI"><span class="nav-number">2.1.</span> <span class="nav-text">AMI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Instance-Type"><span class="nav-number">2.2.</span> <span class="nav-text">Instance Type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Specify-network-settings"><span class="nav-number">2.3.</span> <span class="nav-text">Specify network settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attach-IAM-role"><span class="nav-number">2.4.</span> <span class="nav-text">Attach IAM role</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storage-options"><span class="nav-number">2.5.</span> <span class="nav-text">Storage options</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tags"><span class="nav-number">2.6.</span> <span class="nav-text">Tags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Security-group-settings"><span class="nav-number">2.7.</span> <span class="nav-text">Security group settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-the-key-pair"><span class="nav-number">2.8.</span> <span class="nav-text">Create the key pair</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Elastic-Beanstalk-with-EC2"><span class="nav-number">2.9.</span> <span class="nav-text">Elastic Beanstalk with EC2</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -417,7 +418,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -430,7 +431,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -478,12 +479,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">34k</span>
+    <span title="Symbols count total">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">31 mins.</span>
+    <span title="Reading time total">33 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
