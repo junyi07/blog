@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/blog/2020/12/27/2020-12-27-hello-world/</url>
-    <content><![CDATA[<p>Hello everyone, this is my first blog and I am really excited! </p>
-<a id="more"></a>
-<h2 id="Say-hi"><a href="#Say-hi" class="headerlink" title="Say hi"></a>Say hi</h2><p>I guess my blog will mainly talk about programming, my thoughts and what I learned recently. It is a good habit to write things down, isn’t it? Actually I had a thought about building my own blog from long time ago, but I was too lazy lol. Now during my winter break, because of COVID-19, I got a lot of free time. I think it is time to learn something that I’m interested in and record my learning progress.</p>
-<p>BTW, I am a non-native speaker, and my first language is Chinese. However, I would like to try to write my posts in English to push myself think in English. So if my words are non-native or weired, please forgive me :)</p>
-<h2 id="About-blog"><a href="#About-blog" class="headerlink" title="About blog"></a>About blog</h2><p>The blog is created based on <code>Hexo + GitHub Page + hexo-theme-next</code>. the process is much more fluent than I expect (i.e. thanks for the detailed doc). I spent two days on creating the blog. The most time-consuming thing is to decide which theme I prefer and adjust the page details and animations. I did not buy a domain name because I think my blog is more like a diary to me and this is good enough.</p>
-<p>That’s it. Hope this is a good start and thanks for reading my blog!</p>
-]]></content>
-      <categories>
-        <category>Some thoughts</category>
-      </categories>
-      <tags>
-        <tag>Thoughts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Elastic Compute Cloud</title>
     <url>/blog/2020/12/28/2020-12-28-Elastic-Compute-Cloud/</url>
     <content><![CDATA[<p>Amazon Elastic Compute Cloud (Amazon EC2) provides virtual machines (VM) where you can host the same kinds of applications that you might run on a traditional on-premises server. This blog is to record what I learned about EC2 recently. </p>
@@ -344,7 +327,7 @@
       </tags>
   </entry>
   <entry>
-    <title>2021-01-15-Nginx-and-Gunicorn</title>
+    <title>Nginx and Gunicorn</title>
     <url>/blog/2021/01/15/2021-01-15-Nginx-and-Gunicorn/</url>
     <content><![CDATA[<p>Recently I learned to deploy Django project on Elastic Beanstalk. My original thought is I get a VM and then run the app locally. However, the fact is that the way has not gone through security audits or performance tests. This article will introduce Nginx and Gunicorn in EC2 instance.</p>
 <a id="more"></a>
@@ -395,6 +378,23 @@
         <tag>AWS</tag>
         <tag>Nginx</tag>
         <tag>Gunicorn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/blog/2020/12/27/2020-12-27-hello-world/</url>
+    <content><![CDATA[<p>Hello everyone, this is my first blog and I am really excited! </p>
+<a id="more"></a>
+<h2 id="Say-hi"><a href="#Say-hi" class="headerlink" title="Say hi"></a>Say hi</h2><p>I guess my blog will mainly talk about programming, my thoughts and what I learned recently. It is a good habit to write things down, isn’t it? Actually I had a thought about building my own blog from long time ago, but I was too lazy lol. Now during my winter break, because of COVID-19, I got a lot of free time. I think it is time to learn something that I’m interested in and record my learning progress.</p>
+<p>BTW, I am a non-native speaker, and my first language is Chinese. However, I would like to try to write my posts in English to push myself think in English. So if my words are non-native or weired, please forgive me :)</p>
+<h2 id="About-blog"><a href="#About-blog" class="headerlink" title="About blog"></a>About blog</h2><p>The blog is created based on <code>Hexo + GitHub Page + hexo-theme-next</code>. the process is much more fluent than I expect (i.e. thanks for the detailed doc). I spent two days on creating the blog. The most time-consuming thing is to decide which theme I prefer and adjust the page details and animations. I did not buy a domain name because I think my blog is more like a diary to me and this is good enough.</p>
+<p>That’s it. Hope this is a good start and thanks for reading my blog!</p>
+]]></content>
+      <categories>
+        <category>Some thoughts</category>
+      </categories>
+      <tags>
+        <tag>Thoughts</tag>
       </tags>
   </entry>
 </search>
