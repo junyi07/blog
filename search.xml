@@ -373,11 +373,13 @@
 ]]></content>
       <categories>
         <category>AWS</category>
+        <category>Django</category>
       </categories>
       <tags>
         <tag>AWS</tag>
         <tag>Nginx</tag>
         <tag>Gunicorn</tag>
+        <tag>Django</tag>
       </tags>
   </entry>
   <entry>
