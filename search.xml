@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/blog/2020/12/27/2020-12-27-hello-world/</url>
+    <content><![CDATA[<p>Hello everyone, this is my first blog and I am really excited! </p>
+<a id="more"></a>
+<h2 id="Say-hi"><a href="#Say-hi" class="headerlink" title="Say hi"></a>Say hi</h2><p>I guess my blog will mainly talk about programming, my thoughts and what I learned recently. It is a good habit to write things down, isn’t it? Actually I had a thought about building my own blog from long time ago, but I was too lazy lol. Now during my winter break, because of COVID-19, I got a lot of free time. I think it is time to learn something that I’m interested in and record my learning progress.</p>
+<p>BTW, I am a non-native speaker, and my first language is Chinese. However, I would like to try to write my posts in English to push myself think in English. So if my words are non-native or weired, please forgive me :)</p>
+<h2 id="About-blog"><a href="#About-blog" class="headerlink" title="About blog"></a>About blog</h2><p>The blog is created based on <code>Hexo + GitHub Page + hexo-theme-next</code>. the process is much more fluent than I expect (i.e. thanks for the detailed doc). I spent two days on creating the blog. The most time-consuming thing is to decide which theme I prefer and adjust the page details and animations. I did not buy a domain name because I think my blog is more like a diary to me and this is good enough.</p>
+<p>That’s it. Hope this is a good start and thanks for reading my blog!</p>
+]]></content>
+      <categories>
+        <category>Some thoughts</category>
+      </categories>
+      <tags>
+        <tag>Thoughts</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Elastic Compute Cloud</title>
     <url>/blog/2020/12/28/2020-12-28-Elastic-Compute-Cloud/</url>
     <content><![CDATA[<p>Amazon Elastic Compute Cloud (Amazon EC2) provides virtual machines (VM) where you can host the same kinds of applications that you might run on a traditional on-premises server. This blog is to record what I learned about EC2 recently. </p>
@@ -40,23 +57,6 @@
       </categories>
       <tags>
         <tag>AWS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/blog/2020/12/27/2020-12-27-hello-world/</url>
-    <content><![CDATA[<p>Hello everyone, this is my first blog and I am really excited! </p>
-<a id="more"></a>
-<h2 id="Say-hi"><a href="#Say-hi" class="headerlink" title="Say hi"></a>Say hi</h2><p>I guess my blog will mainly talk about programming, my thoughts and what I learned recently. It is a good habit to write things down, isn’t it? Actually I had a thought about building my own blog from long time ago, but I was too lazy lol. Now during my winter break, because of COVID-19, I got a lot of free time. I think it is time to learn something that I’m interested in and record my learning progress.</p>
-<p>BTW, I am a non-native speaker, and my first language is Chinese. However, I would like to try to write my posts in English to push myself think in English. So if my words are non-native or weired, please forgive me :)</p>
-<h2 id="About-blog"><a href="#About-blog" class="headerlink" title="About blog"></a>About blog</h2><p>The blog is created based on <code>Hexo + GitHub Page + hexo-theme-next</code>. the process is much more fluent than I expect (i.e. thanks for the detailed doc). I spent two days on creating the blog. The most time-consuming thing is to decide which theme I prefer and adjust the page details and animations. I did not buy a domain name because I think my blog is more like a diary to me and this is good enough.</p>
-<p>That’s it. Hope this is a good start and thanks for reading my blog!</p>
-]]></content>
-      <categories>
-        <category>Some thoughts</category>
-      </categories>
-      <tags>
-        <tag>Thoughts</tag>
       </tags>
   </entry>
   <entry>
@@ -400,6 +400,60 @@
       </tags>
   </entry>
   <entry>
+    <title>Dependency Injection (3)</title>
+    <url>/blog/2021/01/25/2021-01-25-Dependency-Injection-3/</url>
+    <content><![CDATA[<p>Recently, I read some articles and have a deeper understanding about why the advantages of DI. Also, I learned some advanced wiring in Spring.</p>
+<a id="more"></a>
+
+<h2 id="Why-DI"><a href="#Why-DI" class="headerlink" title="Why DI"></a>Why DI</h2><p>Let’s start with an example. There is a Car class, its dependencies are Trie -&gt; Bottom -&gt; Framework -&gt; Car. Usually, we use constructor to inject dependencies.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Framework framework;</span><br><span class="line">  </span><br><span class="line">  Car(Framework framework) &#123;</span><br><span class="line">    <span class="keyword">this</span>.framework = framework;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>However, there would be a bunch of <code>new object()</code> when you want to create a new Car instance.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> size = <span class="number">40</span>;</span><br><span class="line">Tire tire = <span class="keyword">new</span> Tire(<span class="number">40</span>);</span><br><span class="line">Bottom bottom = <span class="keyword">new</span> Bottom(tire);</span><br><span class="line">Framework framework = <span class="keyword">new</span> Framework(bottom);</span><br><span class="line">Car newCar = <span class="keyword">new</span> Car(framework);</span><br></pre></td></tr></table></figure>
+<p>Imagine what if there are thousands of dependencies. Some old services  have this issue. In this case It is hard to maintain or test. What DI does is to reduce the steps of creating instances. IoC(Inversion of Control) containers does this for us. IoC is similar to a factory. You can directly ask for IoC container to get an instance when you need it.<br>DI way to do it:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> Framework framework;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="meta">@RunWith(SpringJUnit4ClassRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest(classes = ExampleApplicationCI.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestCarInjection</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> Car car;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testConstructorInjection</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Assert.assertNotNull(car.framework.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Therefore there are two benefits:</p>
+<ol>
+<li>Reduce the steps of creating instances. Also, you don’t have to care about how many parameters in the constructors</li>
+<li>Easy to test. With DI, you just need to mock the dependencies.<h2 id="Advanced-Wiring"><a href="#Advanced-Wiring" class="headerlink" title="Advanced Wiring"></a>Advanced Wiring</h2></li>
+</ol>
+<h3 id="Addressing-ambiguity-in-autowiring"><a href="#Addressing-ambiguity-in-autowiring" class="headerlink" title="Addressing ambiguity in autowiring"></a>Addressing ambiguity in autowiring</h3><p>Suppose that you have annotated the following setDessert() method with @Autowired. Because all three implementations are annotated by @Component, they’re all picked up during component-scanning and created as beans in the Spring application context. Then, when Spring tries to autowire the Dessert parameter in setDessert(), it doesn’t have a single, unambiguous choice.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDessert</span><span class="params">(Dessert dessert)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.dessert = dessert;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cake</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cookies</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IceCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Designating-a-primary-bean"><a href="#Designating-a-primary-bean" class="headerlink" title="Designating a primary bean"></a>Designating a primary bean</h3><p>With @Primary, in the event of any ambiguity, Spring will choose the primary bean over any other candidate beans.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Primary</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IceCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<p>But what if there are two primary Dessert. This poses a new ambi- guity issue.</p>
+<h3 id="Qualifying-autowired-beans"><a href="#Qualifying-autowired-beans" class="headerlink" title="Qualifying autowired beans"></a>Qualifying autowired beans</h3><p>The @Qualifier annotation is the main way to work with qualifiers. It can be applied alongside @Autowired or @Inject at the point of injection to specify which bean you want to be injected.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Qualifier(&quot;iceCream&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ColdCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="meta">@Qualifier(&quot;iceCream&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDessert</span><span class="params">(Dessert dessert)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.dessert = dessert;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The parameter given to @Qualifier is the ID of the bean that you want to inject. All @Component-annotated classes will be created as beans whose ID is the uncapitalized class name. Therefore, @Qualifier(“iceCream”) refers to the bean created when component-scanning created an instance of the IceCream class.</p>
+<p>Instead of relying on the bean ID as the qualifier, you can assign your own qualifier to a bean. All you need to do is place the @Qualifier annotation on the bean declara- tion. For example, it can be applied alongside @Component like this:</p>
+<p>For lack of having specified any other qualifiers, all beans are given a default qualifier that’s the same as their bean ID. </p>
+<h3 id="Scoping-beans"><a href="#Scoping-beans" class="headerlink" title="Scoping beans"></a>Scoping beans</h3><p>By default, all beans created in the Spring application context are created as single- tons. That is to say, no matter how many times a given bean is injected into other beans, it’s always the same instance that is injected each time. Spring defines several scopes under which a bean can be created, including the following:</p>
+<ul>
+<li><p>Singleton—One instance of the bean is created for the entire application.</p>
+</li>
+<li><p>Prototype—One instance of the bean is created every time the bean is injected</p>
+<p>into or retrieved from the Spring application context.</p>
+</li>
+<li><p>Session —In a web application, one instance of the bean is created for each session.</p>
+</li>
+<li><p>Request—In a web application, one instance of the bean is created for each</p>
+<p>request.</p>
+</li>
+</ul>
+<p>To select an alternative type, you can use the @Scope annotation. An example for Prototype is listed in t he following:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span></span><br><span class="line"><span class="comment">// or @Scope(&quot;prototype&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Notepad</span> </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="meta">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Notepad <span class="title">notepad</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> Notepad();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>In a web application, it may be useful to instantiate a bean that’s shared within the scope of a given <strong>request or session</strong>. For instance, in a typical e-commerce application, you may have a bean that represents the user’s shopping cart. If the shopping cart bean is a singleton, then all users will be adding products to the same cart. On the other hand, if the shopping cart is prototype-scoped, then products added to the cart in one area of the application may not be available in another part of the application where a different prototype-scoped shopping cart was injected.</p>
+<p><strong>Reference</strong>: <a href="https://www.zhihu.com/question/23277575">The advantages of DI</a> and <a href="https://livebook.manning.com/book/spring-in-action-sixth-edition/welcome/v-3/">Spring in Action</a></p>
+<p>Thank you for reading!</p>
+]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Dependency Injection (1)</title>
     <url>/blog/2021/01/19/2021-01-19-Dependency-Injection-1/</url>
     <content><![CDATA[<p>Dependency injection is a programming technique that makes a class independent of its dependencies. That enables you to replace dependencies without changing the class that uses them, and It reduces the risk that you have to change a class just because one of its dependencies changed. It also makes code easier to test What DI does is  loosing coupling or decoupling.</p>
@@ -471,60 +525,6 @@
 <p>We can also pass mocks via setters, of course, but if we add a new dependency to a class, we may forget to call the setter in the test, potentially causing a NullPointerException in the test.</p>
 <h3 id="Immutability"><a href="#Immutability" class="headerlink" title="Immutability"></a>Immutability</h3><p>Constructor injection helps in creating immutable objects because a constructor’s signature is the only possible way to create objects. Once we create a bean, we cannot alter its dependencies anymore. With setter injection, it’s possible to inject the dependency after creation, thus leading to mutable objects which, among other things, may not be thread-safe in a multi-threaded environment and are harder to debug due to their mutability.</p>
 <p>Reference: <a href="https://reflectoring.io/constructor-injection/">Why You Should Use Constructor Injection in Spring</a></p>
-<p>Thank you for reading!</p>
-]]></content>
-      <categories>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Dependency Injection (3)</title>
-    <url>/blog/2021/01/25/2021-01-25-Dependency-Injection-3/</url>
-    <content><![CDATA[<p>Recently, I read some articles and have a deeper understanding about why the advantages of DI. Also, I learned some advanced wiring in Spring.</p>
-<a id="more"></a>
-
-<h2 id="Why-DI"><a href="#Why-DI" class="headerlink" title="Why DI"></a>Why DI</h2><p>Let’s start with an example. There is a Car class, its dependencies are Trie -&gt; Bottom -&gt; Framework -&gt; Car. Usually, we use constructor to inject dependencies.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Framework framework;</span><br><span class="line">  </span><br><span class="line">  Car(Framework framework) &#123;</span><br><span class="line">    <span class="keyword">this</span>.framework = framework;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>However, there would be a bunch of <code>new object()</code> when you want to create a new Car instance.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> size = <span class="number">40</span>;</span><br><span class="line">Tire tire = <span class="keyword">new</span> Tire(<span class="number">40</span>);</span><br><span class="line">Bottom bottom = <span class="keyword">new</span> Bottom(tire);</span><br><span class="line">Framework framework = <span class="keyword">new</span> Framework(bottom);</span><br><span class="line">Car newCar = <span class="keyword">new</span> Car(framework);</span><br></pre></td></tr></table></figure>
-<p>Imagine what if there are thousands of dependencies. Some old services  have this issue. In this case It is hard to maintain or test. What DI does is to reduce the steps of creating instances. IoC(Inversion of Control) containers does this for us. IoC is similar to a factory. You can directly ask for IoC container to get an instance when you need it.<br>DI way to do it:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> Framework framework;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="meta">@RunWith(SpringJUnit4ClassRunner.class)</span></span><br><span class="line"><span class="meta">@SpringBootTest(classes = ExampleApplicationCI.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestCarInjection</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> Car car;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testConstructorInjection</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Assert.assertNotNull(car.framework.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Therefore there are two benefits:</p>
-<ol>
-<li>Reduce the steps of creating instances. Also, you don’t have to care about how many parameters in the constructors</li>
-<li>Easy to test. With DI, you just need to mock the dependencies.<h2 id="Advanced-Wiring"><a href="#Advanced-Wiring" class="headerlink" title="Advanced Wiring"></a>Advanced Wiring</h2></li>
-</ol>
-<h3 id="Addressing-ambiguity-in-autowiring"><a href="#Addressing-ambiguity-in-autowiring" class="headerlink" title="Addressing ambiguity in autowiring"></a>Addressing ambiguity in autowiring</h3><p>Suppose that you have annotated the following setDessert() method with @Autowired. Because all three implementations are annotated by @Component, they’re all picked up during component-scanning and created as beans in the Spring application context. Then, when Spring tries to autowire the Dessert parameter in setDessert(), it doesn’t have a single, unambiguous choice.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDessert</span><span class="params">(Dessert dessert)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.dessert = dessert;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cake</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cookies</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IceCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Designating-a-primary-bean"><a href="#Designating-a-primary-bean" class="headerlink" title="Designating a primary bean"></a>Designating a primary bean</h3><p>With @Primary, in the event of any ambiguity, Spring will choose the primary bean over any other candidate beans.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Primary</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IceCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br></pre></td></tr></table></figure>
-<p>But what if there are two primary Dessert. This poses a new ambi- guity issue.</p>
-<h3 id="Qualifying-autowired-beans"><a href="#Qualifying-autowired-beans" class="headerlink" title="Qualifying autowired beans"></a>Qualifying autowired beans</h3><p>The @Qualifier annotation is the main way to work with qualifiers. It can be applied alongside @Autowired or @Inject at the point of injection to specify which bean you want to be injected.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Qualifier(&quot;iceCream&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ColdCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span> </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="meta">@Qualifier(&quot;iceCream&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDessert</span><span class="params">(Dessert dessert)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.dessert = dessert;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>The parameter given to @Qualifier is the ID of the bean that you want to inject. All @Component-annotated classes will be created as beans whose ID is the uncapitalized class name. Therefore, @Qualifier(“iceCream”) refers to the bean created when component-scanning created an instance of the IceCream class.</p>
-<p>Instead of relying on the bean ID as the qualifier, you can assign your own qualifier to a bean. All you need to do is place the @Qualifier annotation on the bean declara- tion. For example, it can be applied alongside @Component like this:</p>
-<p>For lack of having specified any other qualifiers, all beans are given a default qualifier that’s the same as their bean ID. </p>
-<h3 id="Scoping-beans"><a href="#Scoping-beans" class="headerlink" title="Scoping beans"></a>Scoping beans</h3><p>By default, all beans created in the Spring application context are created as single- tons. That is to say, no matter how many times a given bean is injected into other beans, it’s always the same instance that is injected each time. Spring defines several scopes under which a bean can be created, including the following:</p>
-<ul>
-<li><p>Singleton—One instance of the bean is created for the entire application.</p>
-</li>
-<li><p>Prototype—One instance of the bean is created every time the bean is injected</p>
-<p>into or retrieved from the Spring application context.</p>
-</li>
-<li><p>Session —In a web application, one instance of the bean is created for each session.</p>
-</li>
-<li><p>Request—In a web application, one instance of the bean is created for each</p>
-<p>request.</p>
-</li>
-</ul>
-<p>To select an alternative type, you can use the @Scope annotation. An example for Prototype is listed in t he following:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span></span><br><span class="line"><span class="comment">// or @Scope(&quot;prototype&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Notepad</span> </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="meta">@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Notepad <span class="title">notepad</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> Notepad();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>In a web application, it may be useful to instantiate a bean that’s shared within the scope of a given <strong>request or session</strong>. For instance, in a typical e-commerce application, you may have a bean that represents the user’s shopping cart. If the shopping cart bean is a singleton, then all users will be adding products to the same cart. On the other hand, if the shopping cart is prototype-scoped, then products added to the cart in one area of the application may not be available in another part of the application where a different prototype-scoped shopping cart was injected.</p>
-<p><strong>Reference</strong>: <a href="https://www.zhihu.com/question/23277575">The advantages of DI</a> and <a href="https://livebook.manning.com/book/spring-in-action-sixth-edition/welcome/v-3/">Spring in Action</a></p>
 <p>Thank you for reading!</p>
 ]]></content>
       <categories>
@@ -648,6 +648,48 @@
       <tags>
         <tag>Java</tag>
         <tag>Design pattern</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mapreduce</title>
+    <url>/blog/2021/05/20/2021-05-20-Mapreduce/</url>
+    <content><![CDATA[<h1 id="Mapreduce"><a href="#Mapreduce" class="headerlink" title="Mapreduce"></a>Mapreduce</h1><p>MapReduce is a processing technique and a program model for distributed computing. The main goal of mapreduce is to  make distributed system easy to program – failures and data movement are hidden.</p>
+<a id="more"></a>
+
+<h2 id="Execution-overview"><a href="#Execution-overview" class="headerlink" title="Execution overview"></a>Execution overview</h2><p>MapReduce implements various mathematical algorithms to divide a task into small parts and assign them to multiple systems. In technical terms, MapReduce algorithm helps in sending the Map &amp; Reduce tasks to appropriate servers in a cluster.</p>
+<p><img src="https://junyi-blog.oss-us-east-1.aliyuncs.com/2020/20210520174015.png" alt="img"></p>
+<ol>
+<li>The MapReduce library in the user program first splits the input files into M pieces of typically 16 megabytes to 64 megabytes (MB) per piece (con- trollable by the user via an optional parameter). It then starts up many copies of the program on a clus- ter of machines.</li>
+<li>One of the copies of the program is special – the master. The rest are workers that are assigned work by the master. There are M map tasks and R reduce tasks to assign. The master picks idle workers and assigns each one a map task or a reduce task.</li>
+<li>A worker who is assigned a map task reads the contents of the corresponding input split. It parses key/value pairs out of the input data and passes each pair to the user-defined <em>Map</em> function. The intermediate key/value pairs produced by the <em>Map</em> function are buffered in memory.</li>
+<li>Periodically, the buffered pairs are written to local disk, partitioned into R regions by the partitioning function. The locations of these buffered pairs on the local disk are passed back to the master, who is responsible for forwarding these locations to the reduce workers.</li>
+<li>When a reduce worker is notified by the master about these locations, it uses remote procedure calls to read the buffered data from the local disks of the map workers. When a reduce worker has read all in- termediate data, it sorts it by the intermediate keys so that all occurrences of the same key are grouped together. The sorting is needed because typically many different keys map to the same reduce task. If the amount of intermediate data is too large to fit in memory, an external sort is used.</li>
+<li>The reduce worker iterates over the sorted intermediate data and for each unique intermediate key encountered, it passes the key and the corresponding set of intermediate values to the user’s <em>Reduce</em> function. The output of the <em>Reduce</em> function is appended to a final output file for this reduce partition.</li>
+<li>When all map tasks and reduce tasks have been completed, the master wakes up the user program. At this point, the MapReduce call in the user program returns back to the user code.</li>
+</ol>
+<h2 id="Worker-Failure"><a href="#Worker-Failure" class="headerlink" title="Worker Failure"></a>Worker Failure</h2><p>The master pings every worker periodically. If no re- sponse is received from a worker in a certain amount of time, the master marks the worker as failed. Any map tasks completed by the worker are reset back to their ini- tial <em>idle</em> state, and therefore become eligible for schedul- ing on other workers. Similarly, any map task or reduce task in progress on a failed worker is also reset to <em>idle</em> and becomes eligible for rescheduling.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">input is (already) split into M files</span><br><span class="line">Input1 -&gt; Map -&gt; a,1 b,1</span><br><span class="line">Input2 -&gt; Map -&gt;     b,1</span><br><span class="line">Input3 -&gt; Map -&gt; a,1     c,1</span><br><span class="line">                  |   |   |</span><br><span class="line">                  |   |   -&gt; Reduce -&gt; c,1</span><br><span class="line">                  |   -----&gt; Reduce -&gt; b,2</span><br><span class="line">                  ---------&gt; Reduce -&gt; a,2</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Input is read from local disk (via GFS), not over the network (i.e. Input -&gt; Map).</li>
+<li>Map worker writes to local disk. Reduce workers read directly from Map workers, not via GFS. Workers are the same machine</li>
+<li>Shuffle stage transfers the map output from Mapper to a Reducer. ( in this case &lt;a, [1, 1]&gt;)</li>
+<li>In shuffle stage,  it reads the same keys across different computers <strong>over the network</strong>.</li>
+</ul>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><p>Map</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCountMapper</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">LongWritable</span>, <span class="title">Text</span>, <span class="title">Text</span>, <span class="title">IntWritable</span>&gt;</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * call the defined map function each time when reading one line</span></span><br><span class="line"><span class="comment">	 * parameters:</span></span><br><span class="line"><span class="comment">	 * 		key: vector of current line</span></span><br><span class="line"><span class="comment">	 * 		context: text value of current line</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">map</span><span class="params">(LongWritable key, Text value,Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</span><br><span class="line">		String line = value.toString();</span><br><span class="line">		String[] words=line.split(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// output: &lt;word，1&gt;</span></span><br><span class="line">		<span class="keyword">for</span>(String word:words)&#123;</span><br><span class="line">			context.write(<span class="keyword">new</span> Text(word), <span class="keyword">new</span> IntWritable(<span class="number">1</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Reduce</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCountReducer</span> <span class="keyword">extends</span> <span class="title">Reducer</span>&lt;<span class="title">Text</span>, <span class="title">IntWritable</span>, <span class="title">Text</span>, <span class="title">IntWritable</span>&gt; </span>&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 * get the key-value pairs from the shuffle stage</span></span><br><span class="line"><span class="comment">	 * all occurrences of the same key are grouped together. &lt;same key, list(value)&gt;. the value is an iterator</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">reduce</span><span class="params">(Text key, Iterable&lt;IntWritable&gt; values,Context context)</span> <span class="keyword">throws</span> IOException, InterruptedException </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">		<span class="keyword">for</span>(IntWritable value:values)&#123;</span><br><span class="line">			count+=value.get();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		context.write(key, <span class="keyword">new</span> IntWritable(count));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Client code</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WordCountJobSubmitter</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException, InterruptedException </span>&#123;</span><br><span class="line">		Configuration conf = <span class="keyword">new</span> Configuration();</span><br><span class="line">		Job wordCountJob = Job.getInstance(conf);</span><br><span class="line">		</span><br><span class="line">		wordCountJob.setJarByClass(WordCountJobSubmitter.class);</span><br><span class="line">		</span><br><span class="line">		wordCountJob.setMapperClass(WordCountMapper.class);</span><br><span class="line">		wordCountJob.setReducerClass(WordCountReducer.class);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// Type of key-value in the Map stage</span></span><br><span class="line">		wordCountJob.setMapOutputKeyClass(Text.class);</span><br><span class="line">		wordCountJob.setMapOutputValueClass(IntWritable.class);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// Type of key-value for the output</span></span><br><span class="line">		wordCountJob.setOutputKeyClass(Text.class);</span><br><span class="line">		wordCountJob.setOutputValueClass(IntWritable.class);</span><br><span class="line">		</span><br><span class="line">		FileInputFormat.setInputPaths(wordCountJob, <span class="string">&quot;PATH&quot;</span>);</span><br><span class="line">		FileOutputFormat.setOutputPath(wordCountJob, <span class="keyword">new</span> Path(<span class="string">&quot;PATH&quot;</span>));</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//submit job to hadoop cluster</span></span><br><span class="line">		wordCountJob.waitForCompletion(<span class="keyword">true</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://nil.csail.mit.edu/6.824/2020/schedule.html">http://nil.csail.mit.edu/6.824/2020/schedule.html</a></p>
+<p><a href="http://nil.csail.mit.edu/6.824/2020/papers/mapreduce.pdf">http://nil.csail.mit.edu/6.824/2020/papers/mapreduce.pdf</a></p>
+]]></content>
+      <categories>
+        <category>Distributed system</category>
+      </categories>
+      <tags>
+        <tag>MIT 6.824</tag>
+        <tag>Distributed system</tag>
       </tags>
   </entry>
 </search>
